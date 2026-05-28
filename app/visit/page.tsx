@@ -50,14 +50,12 @@ export default function VisitPage() {
           <div className="md:col-span-5">
             <p className="eyebrow">Address</p>
             <address className="mt-3 font-display text-2xl not-italic leading-snug text-text">
-              The Funk Zone
-              <br />
-              Adjacent to The Base Gym
+              123 Santa Barbara St
               <br />
               Santa Barbara, California
             </address>
             <p className="mt-3 text-sm italic text-text-3">
-              Exact street address provided at the time of booking.
+              In the Funk Zone, adjacent to The Base Gym.
             </p>
           </div>
 
@@ -82,6 +80,20 @@ export default function VisitPage() {
                 independently. Our entrance, room, and apparatus are our own.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-16 lg:mt-20">
+          <p className="eyebrow">Find us</p>
+          <div className="mt-4 relative aspect-[16/9] w-full overflow-hidden border border-border">
+            <iframe
+              src="https://www.google.com/maps?q=123+Santa+Barbara+St,+Santa+Barbara,+CA&output=embed"
+              title="Map of Santa Barbara Pilates — 123 Santa Barbara St"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 h-full w-full"
+              style={{ border: 0 }}
+            />
           </div>
         </div>
 
