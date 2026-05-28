@@ -5,7 +5,7 @@ marketing site could ship first. **Every item below must be complete before the
 portal (`sbp-portal-v1.html`) is exposed to the public internet under
 `santabarbarapilates.com` or any production hostname.**
 
-Last updated: 2026-05-27.
+Last updated: 2026-05-28.
 
 ---
 
@@ -32,11 +32,45 @@ That includes members, payments, client notes, and trainer invoices.
 the portal has an auth session (item 2), enabling RLS without policies would
 break it.
 
+**Update 2026-05-28.** The portal v2 rebuild (`Pilates Management App`) now
+ships real Supabase auth, but it has only migrated the **leads** screen so far
+(`leads` already had RLS since migration 001). The legacy `sbp-portal-v1.html`
+is still in production and still reads all 24 of these tables with the anon key
+and no session. So RLS rollout remains gated **per table** on migrating its
+screen off legacy onto v2 — we can lock down a table only once nothing
+unauthenticated reads it. Next-up tables track the v2 migration order:
+`members`, `member_notes`, `client_notes` (member-management screen, next after
+leads), then `payments` / `sessions` / `session_log` (billing + scheduling).
+
 **Must complete before portal launches publicly.**
 
 ---
 
 ## 2. Portal auth migration (login + manager PIN) from `index187.html`
+
+**Largely addressed 2026-05-28 by the portal v2 rebuild — see below.**
+Rather than retrofitting auth into the legacy single-file portal, we are
+rebuilding the portal as a structured Next.js app (`Pilates Management App`)
+with `@supabase/ssr` cookie sessions. As of this date:
+
+- Login + signOut server actions ship; the `(admin)` route group is
+  middleware-protected; unauthenticated visitors redirect to `/login`.
+- Sara has an `auth.users` account (`saradonen@icloud.com`), linked to
+  `public.staff.user_id` where `slug = 'sara'`. Portal reads now run as the
+  `authenticated` role, matching the migration-001 policies.
+- The **leads** screen is migrated and verified end-to-end (fixes the
+  zero-rows-under-RLS problem Sara hit).
+
+**Still open under this item:**
+- Manager-PIN gate is **deferred** (not yet ported). When done, store a salted
+  hash, check server-side — see `docs/auth-plan.md` in the portal project.
+- The legacy `sbp-portal-v1.html` remains in production, unauthenticated, until
+  v2 replaces it screen by screen. This item fully closes only once legacy is
+  decommissioned.
+
+---
+
+**Original notes (legacy retrofit path — superseded by the v2 rebuild):**
 
 **State today.** `sbp-portal-v1.html` talks to Supabase with the anon key and
 no user session. Manager PIN is checked client-side against
