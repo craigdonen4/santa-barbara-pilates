@@ -4,7 +4,7 @@ import Link from "next/link";
 const NAV = [
   { href: "/method", label: "The Method" },
   { href: "/sara", label: "Sara" },
-  { href: "/instructors", label: "Instructors" },
+  // { href: "/instructors", label: "Instructors" }, // re-enable when team is ready
   { href: "/pricing", label: "Pricing" },
   { href: "/visit", label: "Visit" },
   { href: "/journal", label: "Journal" },

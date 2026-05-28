@@ -25,9 +25,6 @@ export function Footer() {
                 <Link href="/sara" className="link-quiet">Sara</Link>
               </li>
               <li>
-                <Link href="/instructors" className="link-quiet">Instructors</Link>
-              </li>
-              <li>
                 <Link href="/journal" className="link-quiet">Journal</Link>
               </li>
             </ul>
