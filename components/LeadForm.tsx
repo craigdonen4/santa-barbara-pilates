@@ -68,9 +68,10 @@ export function LeadForm() {
         autoComplete="email"
       />
       <Field
-        label="Phone (optional)"
+        label="Phone"
         name="phone"
         type="tel"
+        required
         autoComplete="tel"
       />
       <FieldArea

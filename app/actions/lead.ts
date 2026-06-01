@@ -25,12 +25,15 @@ export async function submitLead(formData: FormData): Promise<LeadResult> {
   if (!email || !email.includes("@")) {
     return { ok: false, error: "A valid email is required." };
   }
+  if (!phone) {
+    return { ok: false, error: "A phone number is required." };
+  }
 
   const { error } = await supabase.from("leads").insert({
     first_name,
     last_name: last_name || null,
     email,
-    phone: phone || null,
+    phone,
     notes: notes || null,
     source: "website",
   });

@@ -1,5 +1,19 @@
 # Santa Barbara Pilates — marketing site
 
+> **Location update — 2026-05-31.** Both this project and the sibling
+> Pilates Management App have been **moved out of iCloud Drive** to plain
+> local storage. New canonical paths:
+>
+> - Marketing: `~/Code/CLAUDE CODE 2026/Santa Barbara Pilates/`
+> - Portal: `~/Code/CLAUDE CODE 2026/Pilates Management App/`
+>
+> The old iCloud paths under `~/Library/Mobile Documents/com~apple~CloudDocs/`
+> are obsolete and should not be edited. They'll be trashed after a few
+> days of verification. **If you're reading this from the iCloud path,
+> stop and reopen at `~/Code/...` — your edits there will be discarded.**
+> Relative paths between the two projects (e.g. `../Pilates Management App/`)
+> still resolve correctly because they were moved together as siblings.
+
 ## What this is
 
 The public marketing site for Santa Barbara Pilates. **Live in production**
