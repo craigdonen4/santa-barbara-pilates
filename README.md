@@ -25,18 +25,22 @@ npm run dev
 ```
 
 ## Routes
+
+**Live in nav:**
 - `/` Home — hero video, method snapshot, Sara intro, founders' list, visit
 - `/method` MDX — `content/method.mdx`
 - `/sara` MDX — `content/sara.mdx`
-- `/instructors`, `/instructors/[slug]` — from Supabase `staff` where `public = true`
 - `/pricing` — from Supabase `class_types` where `is_public = true`
 - `/visit` — address, parking, lead form
-- `/journal`, `/journal/[slug]` — empty MDX scaffold
+
+**Soft-disabled (files exist, link commented out in nav + footer):**
+- `/instructors`, `/instructors/[slug]` — from Supabase `staff` where `is_public = true`. Re-enable when the team is ready.
+- `/journal`, `/journal/[slug]` — empty MDX scaffold. Re-enable when there are entries to publish.
 
 ## Editing copy
 - `content/method.mdx`
 - `content/sara.mdx`
-- Add `content/journal/<slug>.mdx` files with `title`, `description`, `date` frontmatter
+- Journal entries (when re-enabling): add `content/journal/<slug>.mdx` files with `title`, `description`, `date` frontmatter
 
 ## Notes
 - Brand tokens live in `app/globals.css` under `@theme` — do not introduce colors outside this palette.

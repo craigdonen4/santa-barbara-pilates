@@ -26,7 +26,8 @@ related but distinct project — see "Sibling project" below.
 - Next.js 15 App Router · React 19 · TypeScript · Tailwind v4
 - Supabase (Postgres + Auth + Storage) — same project as the portal
 - Resend (transactional email for lead notifications, optional)
-- MDX via `next-mdx-remote/rsc` for /method, /sara, /journal long-form copy
+- MDX via `next-mdx-remote/rsc` for /method and /sara long-form copy
+  (journal scaffold also uses it, currently soft-disabled)
 - Deployed: Netlify (auto-deploys from GitHub `main`)
 - GitHub Desktop is the working git client (user has never used CLI git)
 
@@ -85,13 +86,18 @@ see `TODO_security.md`.
 
 ## What's done
 
-- All 10 routes built and live: `/`, `/method`, `/sara`, `/instructors`,
-  `/instructors/[slug]`, `/pricing`, `/visit`, `/journal`, `/journal/[slug]`,
-  `/not-found`
+- All 10 routes built. Live in nav: `/`, `/method`, `/sara`, `/pricing`,
+  `/visit`. Routes that exist on disk but are soft-disabled (commented out
+  in nav + footer, page files preserved for later): `/instructors`,
+  `/instructors/[slug]`, `/journal`, `/journal/[slug]`. Plus `/not-found`.
 - Migration `001_marketing_site.sql` applied to live Supabase project
 - Sara's real row in `staff` has marketing fields filled. Margaret + Iris are
   placeholder rows with `is_public = false` (suppressed until real team
   exists). Instructors link is hidden from nav + footer (commented out).
+- Journal soft-disabled — link removed from nav + footer (commented out in
+  `components/Nav.tsx` and `components/Footer.tsx`), but route files and
+  `content/journal/` scaffold are preserved. Re-enable by uncommenting once
+  there are entries to publish.
 - Photos placed: hero video, /method, /pricing, /visit, /sara composite, nav
   logo, home Visit teaser
 - Lead form → Supabase → optional Resend notification — verified end-to-end
