@@ -24,9 +24,11 @@ export function Footer() {
               <li>
                 <Link href="/sara" className="link-quiet">Sara</Link>
               </li>
+              {/* re-enable when we have journal entries
               <li>
                 <Link href="/journal" className="link-quiet">Journal</Link>
               </li>
+              */}
             </ul>
           </div>
 

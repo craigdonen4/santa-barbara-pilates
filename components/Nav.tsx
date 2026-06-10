@@ -7,7 +7,7 @@ const NAV = [
   // { href: "/instructors", label: "Instructors" }, // re-enable when team is ready
   { href: "/pricing", label: "Pricing" },
   { href: "/visit", label: "Visit" },
-  { href: "/journal", label: "Journal" },
+  // { href: "/journal", label: "Journal" }, // re-enable when we have journal entries
 ];
 
 export function Nav() {
