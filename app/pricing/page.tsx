@@ -62,9 +62,10 @@ export default async function PricingPage() {
             Pricing
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
-            Four formats, the same instructors, the same apparatus. Most
-            clients begin with privates and move into a duet, trio, or small
-            group once they know the work.
+            Every format is taught by the same instructors, on the same
+            apparatus, with the same attention. Most clients begin one-on-one
+            and move into a duet, trio, or small group as the work becomes
+            familiar.
           </p>
         </div>
       </section>
