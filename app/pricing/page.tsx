@@ -62,10 +62,9 @@ export default async function PricingPage() {
             Pricing
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
-            Every format is taught by the same instructors, on the same
-            apparatus, with the same attention. Most clients begin one-on-one
-            and move into a duet, trio, or small group as the work becomes
-            familiar.
+            Every session runs fifty minutes, with close, individual attention.
+            Most clients begin one-on-one and move into a duet, trio, or small
+            group as the work becomes familiar.
           </p>
         </div>
       </section>
