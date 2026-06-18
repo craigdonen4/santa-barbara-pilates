@@ -39,7 +39,7 @@ export default async function PricingPage() {
       <section className="relative overflow-hidden bg-surface-2">
         <div className="absolute inset-0">
           <Image
-            src="/pricing-studio.jpeg"
+            src="/pricing-2.png"
             alt="The studio — reformers and Cadillacs"
             fill
             priority
