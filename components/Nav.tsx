@@ -12,7 +12,7 @@ const NAV = [
 
 export function Nav() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-bg/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-border bg-[#F8F9F3]">
       <div className="mx-auto flex h-28 max-w-[76rem] items-center justify-between px-6 lg:px-10">
         <Link
           href="/"
