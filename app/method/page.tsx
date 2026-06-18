@@ -37,7 +37,6 @@ export default async function MethodPage() {
         </div>
 
         <div className="relative mx-auto flex min-h-[72vh] max-w-[76rem] flex-col justify-end px-6 pb-16 pt-28 lg:px-10 lg:pb-20">
-          <p className="eyebrow">A practice, not a workout</p>
           <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-teal md:text-7xl">
             {title}
           </h1>
