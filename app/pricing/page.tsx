@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "@/components/Container";
 import { supabase, type ClassType } from "@/lib/supabase";
 
@@ -40,7 +39,7 @@ export default async function PricingPage() {
       <section className="relative overflow-hidden bg-surface-2">
         <div className="absolute inset-0">
           <Image
-            src="/pricing.jpeg"
+            src="/pricing-studio.jpeg"
             alt="The studio — reformers and Cadillacs"
             fill
             priority
@@ -62,9 +61,9 @@ export default async function PricingPage() {
             Pricing
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
-            Four formats, the same instructors, the same apparatus. Most
-            clients begin with privates and move into a duet, trio, or small
-            group once they know the work.
+            Sessions are fifty minutes, each with close, individual attention.
+            Most clients begin one-on-one and, if desired, move into a duet,
+            trio, or small group as the work becomes familiar.
           </p>
         </div>
       </section>
@@ -110,27 +109,6 @@ export default async function PricingPage() {
             </li>
           ))}
         </ul>
-
-        <div className="mt-16 grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <p className="eyebrow">Packages</p>
-            <h2 className="font-display font-semibold mt-2 text-3xl leading-tight text-text">
-              Ten- and twenty-session packages are available.
-            </h2>
-          </div>
-          <div className="md:col-span-7">
-            <p className="text-base leading-relaxed text-text-2">
-              Multi-session packages reduce the per-session rate and can be
-              shared between formats. Sessions do not expire. Cancellations
-              with twenty-four hours notice are free of charge.
-            </p>
-            <div className="mt-8">
-              <Link href="/visit#book" className="btn btn-primary">
-                Request a package
-              </Link>
-            </div>
-          </div>
-        </div>
       </Container>
     </article>
   );
