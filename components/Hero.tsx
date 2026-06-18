@@ -13,8 +13,7 @@ export function Hero() {
           preload="metadata"
           aria-hidden="true"
         >
-          <source src="/hero-placeholder.mp4" type="video/mp4" />
-          <source src="/hero-placeholder.mp4" type="video/quicktime" />
+          <source src="/home-page-video.mp4" type="video/mp4" />
         </video>
         <div
           className="absolute inset-0"
