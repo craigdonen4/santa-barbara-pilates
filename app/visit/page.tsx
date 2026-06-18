@@ -73,6 +73,13 @@ export default function VisitPage() {
                 Monday through Saturday, by appointment.
               </p>
             </div>
+            <div>
+              <p className="eyebrow">Cancellations</p>
+              <p className="mt-2 text-base leading-relaxed text-text-2">
+                Cancellations made at least twenty-four hours in advance are
+                free of charge.
+              </p>
+            </div>
             <div className="sm:col-span-2">
               <p className="eyebrow">A note on the gym</p>
               <p className="mt-2 text-base leading-relaxed text-text-2">
