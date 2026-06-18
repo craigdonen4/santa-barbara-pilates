@@ -20,7 +20,7 @@ export default async function MethodPage() {
       <section className="relative overflow-hidden bg-surface-2">
         <div className="absolute inset-0">
           <Image
-            src="/the-method.jpeg"
+            src="/the-method-2.png"
             alt="An instructor watching a client work on the Cadillac"
             fill
             priority
