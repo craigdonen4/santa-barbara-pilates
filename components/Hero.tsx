@@ -24,7 +24,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto flex min-h-[78vh] max-w-[76rem] flex-col justify-end px-6 pb-20 pt-32 lg:px-10 lg:pb-28">
+      <div className="relative mx-auto flex min-h-[78vh] max-w-[76rem] flex-col items-end justify-end px-6 pb-20 pt-32 text-right lg:px-10 lg:pb-28">
         <p className="eyebrow">Santa Barbara, California</p>
         <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-teal md:text-7xl">
           Santa Barbara Pilates
@@ -32,7 +32,7 @@ export function Hero() {
         <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
           An intimate boutique studio in the heart of the Funk Zone.
         </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap justify-end gap-4">
           <Link href="/visit#book" className="btn btn-primary">
             Book a first session
           </Link>
