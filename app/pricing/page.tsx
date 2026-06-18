@@ -62,9 +62,9 @@ export default async function PricingPage() {
             Pricing
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
-            Every session runs fifty minutes, with close, individual attention.
-            Most clients begin one-on-one and move into a duet, trio, or small
-            group as the work becomes familiar.
+            Sessions are fifty minutes, each with close, individual attention.
+            Most clients begin one-on-one and, if desired, move into a duet,
+            trio, or small group as the work becomes familiar.
           </p>
         </div>
       </section>
