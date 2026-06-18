@@ -16,8 +16,8 @@ export default function VisitPage() {
       <section className="relative overflow-hidden bg-surface-2">
         <div className="absolute inset-0">
           <Image
-            src="/IMG_0547.jpeg"
-            alt="A session in progress at Santa Barbara Pilates"
+            src="/visit-studio.jpeg"
+            alt="The studio interior — a ladder barrel by the window, with the Funk Zone outside"
             fill
             priority
             sizes="100vw"
