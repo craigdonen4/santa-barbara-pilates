@@ -112,7 +112,7 @@ export default function HomePage() {
               </h2>
               <div className="prose-editorial mt-6">
                 <p>
-                  She has taught Pilates in Santa Barbara for fifteen years.
+                  She has taught Pilates in Santa Barbara for sixteen years.
                   The studio is her own — small, quiet, and arranged the way
                   she wants to teach.
                 </p>
