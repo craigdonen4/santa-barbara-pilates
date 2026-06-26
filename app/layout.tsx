@@ -18,6 +18,23 @@ export const metadata: Metadata = {
     description:
       "Contemporary Pilates in Santa Barbara. Full apparatus. Privates, duets, trios, and small groups.",
     type: "website",
+    url: "/",
+    siteName: "Santa Barbara Pilates",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Inside the Santa Barbara Pilates studio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Santa Barbara Pilates",
+    description:
+      "Contemporary Pilates in Santa Barbara. Full apparatus. Privates, duets, trios, and small groups.",
+    images: ["/og-image.jpg"],
   },
 };
 
