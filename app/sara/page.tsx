@@ -23,9 +23,6 @@ export default async function SaraPage() {
               <h1 className="font-display mt-4 text-5xl leading-[1.05] text-teal md:text-7xl">
                 {title}
               </h1>
-              <p className="mt-6 font-display text-2xl italic text-text-2">
-                A letter from the studio.
-              </p>
             </div>
             <div className="md:col-span-5">
               <div className="relative aspect-[3/4] w-full overflow-hidden">
