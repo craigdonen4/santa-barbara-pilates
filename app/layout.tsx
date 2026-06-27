@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://santabarbarapilates.com"
   ),
   title: {
-    default: "Santa Barbara Pilates — Contemporary Pilates, taught with care",
+    default: "Santa Barbara Pilates",
     template: "%s — Santa Barbara Pilates",
   },
   description:
