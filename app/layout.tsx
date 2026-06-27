@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s — Santa Barbara Pilates",
   },
   description:
-    "A small private studio in Santa Barbara. Full apparatus, contemporary method, privates, duets, trios, and small groups. Founded by Sara.",
+    "A private Pilates studio in the Funk Zone, Santa Barbara. Contemporary training on the full apparatus — privates, duets, trios, and small groups.",
   openGraph: {
     title: "Santa Barbara Pilates",
     description:
