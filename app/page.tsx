@@ -70,7 +70,7 @@ export default function HomePage() {
             <div className="md:col-span-5">
               <Eyebrow>Our Offering</Eyebrow>
               <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
-                Reformer Pilates in the heart of Santa Barbara.
+                Pilates in the heart of Santa Barbara.
               </h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-text-2">
                 Santa Barbara Pilates is a private Pilates studio in the Funk

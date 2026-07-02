@@ -34,12 +34,12 @@ export default async function PricingPage() {
       <section className="relative overflow-hidden bg-surface-2">
         <div className="absolute inset-0">
           <Image
-            src="/pricing-2.png"
-            alt="The studio — reformers and Cadillacs"
+            src="/pricing-mirrors.png"
+            alt="The studio — Reformers, Cadillacs, and arched mirrors"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[50%_45%]"
+            className="object-cover object-[50%_60%]"
           />
           <div
             className="absolute inset-0"
