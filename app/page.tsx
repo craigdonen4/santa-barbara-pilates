@@ -27,6 +27,29 @@ const METHOD_POINTS = [
   },
 ];
 
+const OFFERINGS = [
+  {
+    title: "Private sessions",
+    body:
+      "One-on-one Pilates instruction on the Reformer and full apparatus, tailored to your body. The right place to begin.",
+  },
+  {
+    title: "Duets",
+    body:
+      "Reformer Pilates for two, with one instructor. Ideal for partners and friends who want to train together.",
+  },
+  {
+    title: "Trios & small groups",
+    body:
+      "Small group Pilates classes kept intimate, so your instructor sees every movement of every session.",
+  },
+  {
+    title: "New to Pilates",
+    body:
+      "First visits begin with a private session and a short studio tour. No experience needed — only curiosity.",
+  },
+];
+
 const FOUNDERS_LIST = [
   "Begin with a private. One hour, one instructor, full studio.",
   "Wear something simple. Grip socks if you have them.",
@@ -38,6 +61,47 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      {/* Our Offering — reformer Pilates in Santa Barbara */}
+      <Section surface="surface">
+        <Container>
+          <div className="grid gap-16 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <Eyebrow>Our Offering</Eyebrow>
+              <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
+                Reformer Pilates in the heart of Santa Barbara.
+              </h2>
+              <p className="mt-6 max-w-md text-base leading-relaxed text-text-2">
+                Santa Barbara Pilates is a private Pilates studio in the Funk
+                Zone, a few blocks from the beach and downtown Santa Barbara.
+                We teach contemporary Pilates on the full apparatus — Reformer,
+                Cadillac, Wunda Chair, and ladder barrel — in private sessions,
+                duets, trios, and small group classes.
+              </p>
+              <Link
+                href="/pricing"
+                className="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-text link-quiet"
+              >
+                Sessions and pricing
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            <ul className="md:col-span-7 grid gap-px bg-border md:grid-cols-2">
+              {OFFERINGS.map((o) => (
+                <li key={o.title} className="bg-surface p-8">
+                  <p className="font-display text-2xl leading-snug text-text">
+                    {o.title}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-text-2">
+                    {o.body}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </Section>
 
       {/* Method snapshot */}
       <Section surface="bg">

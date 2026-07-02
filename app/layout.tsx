@@ -38,6 +38,32 @@ export const metadata: Metadata = {
   },
 };
 
+// Structured data for Google local results. Keep in sync with the
+// Google Business Profile: same name, address, and category.
+// TODO before final: confirm postal code + add telephone once the
+// studio number is public.
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "@id": "https://santabarbarapilates.com/#studio",
+  name: "Santa Barbara Pilates",
+  description:
+    "A private Pilates studio in the Funk Zone, Santa Barbara. Contemporary training on the full apparatus — privates, duets, trios, and small groups.",
+  url: "https://santabarbarapilates.com",
+  image: "https://santabarbarapilates.com/og-image.jpg",
+  logo: "https://santabarbarapilates.com/sbp-logo.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "123 Santa Barbara St",
+    addressLocality: "Santa Barbara",
+    addressRegion: "CA",
+    postalCode: "93101",
+    addressCountry: "US",
+  },
+  areaServed: "Santa Barbara, CA",
+  priceRange: "$60–$165",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -55,6 +81,12 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
         />
       </head>
       <body className="min-h-screen bg-bg text-text antialiased">
