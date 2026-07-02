@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NAV = [
   { href: "/method", label: "The Method" },
-  { href: "/sara", label: "Sara" },
+  { href: "/sara", label: "About" },
   // { href: "/instructors", label: "Instructors" }, // re-enable when team is ready
   { href: "/pricing", label: "Pricing" },
   { href: "/visit", label: "Visit" },
@@ -30,24 +30,27 @@ export function Nav() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[0.78rem] uppercase tracking-[0.16em] text-text-2 transition-colors hover:text-text"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Nav links grouped on the right, next to Book */}
+        <div className="flex items-center gap-8">
+          <nav className="hidden items-center gap-8 md:flex">
+            {NAV.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-[0.78rem] uppercase tracking-[0.16em] text-text-2 transition-colors hover:text-text"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-        <Link
-          href="/visit#book"
-          className="btn btn-outline hidden md:inline-flex"
-        >
-          Book
-        </Link>
+          <Link
+            href="/visit#book"
+            className="btn btn-outline hidden md:inline-flex"
+          >
+            Book
+          </Link>
+        </div>
       </div>
     </header>
   );

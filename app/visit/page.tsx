@@ -55,7 +55,7 @@ export default function VisitPage() {
               Santa Barbara, California
             </address>
             <p className="mt-3 text-sm italic text-text-3">
-              In the Funk Zone, adjacent to The Base Gym.
+              In the heart of the Funk Zone.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ export default function VisitPage() {
               <p className="eyebrow">A note on the gym</p>
               <p className="mt-2 text-base leading-relaxed text-text-2">
                 We share a building with The Base Gym but operate
-                independently. Our entrance, room, and apparatus are our own.
+                independently. Our entrance, room, and equipment are our own.
               </p>
             </div>
           </div>
@@ -108,14 +108,13 @@ export default function VisitPage() {
 
         <div id="book" className="grid scroll-mt-24 gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="eyebrow">Book a first session</p>
             <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
-              Write to us.
+              Ready to book your first session?
             </h2>
             <p className="mt-6 text-base leading-relaxed text-text-2">
-              Tell us a little about your history with Pilates and what you
-              are hoping to work on. We will reply within a business day with
-              suggested times and an exact address.
+              Tell us a little about your history with Pilates and what
+              you&apos;re hoping to work on. We&apos;ll reply within one
+              business day with suggested times.
             </p>
           </div>
           <div className="md:col-span-7">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { BookCta } from "@/components/BookCta";
 import { supabase, type ClassType } from "@/lib/supabase";
 
 export const metadata: Metadata = {
@@ -10,12 +11,6 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 300;
-
-const SESSION_LABEL: Record<NonNullable<ClassType["session_type"]>, string> = {
-  private: "Private",
-  duet: "Duet",
-  small_group: "Small group",
-};
 
 function formatPrice(cents: number | null) {
   if (cents == null) return "On request";
@@ -60,10 +55,10 @@ export default async function PricingPage() {
           <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-teal md:text-7xl">
             Pricing
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
-            Sessions are fifty minutes, each with close, individual attention.
-            Most clients begin one-on-one and, if desired, move into a duet,
-            trio, or small group as the work becomes familiar.
+          <p className="mt-6 max-w-xl text-base font-medium leading-relaxed text-text md:text-lg">
+            Sessions are fifty minutes, with close, individual attention. Most
+            clients begin one-on-one, then move into a duet, trio, or small
+            group as they&apos;d like once the work becomes familiar.
           </p>
         </div>
       </section>
@@ -79,12 +74,7 @@ export default async function PricingPage() {
           {sessions.map((c) => (
             <li key={c.id} className="grid grid-cols-12 gap-6 py-10">
               <div className="col-span-12 md:col-span-3">
-                {c.session_type && (
-                  <p className="eyebrow">
-                    {SESSION_LABEL[c.session_type]}
-                  </p>
-                )}
-                <h2 className="font-display font-semibold mt-2 text-3xl leading-tight text-text">
+                <h2 className="font-display font-semibold text-3xl leading-tight text-text">
                   {c.name}
                 </h2>
               </div>
@@ -110,6 +100,11 @@ export default async function PricingPage() {
           ))}
         </ul>
       </Container>
+
+      <BookCta
+        quote="My experience was awesome. Sara is amazing. Will definitely go back soon."
+        quoteName="Levi C."
+      />
     </article>
   );
 }

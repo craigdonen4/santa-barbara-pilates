@@ -3,27 +3,28 @@ import Image from "next/image";
 import { Hero } from "@/components/Hero";
 import { Container } from "@/components/Container";
 import { Section, Eyebrow } from "@/components/Section";
+import { Testimonials } from "@/components/Testimonials";
 
-const METHOD_POINTS = [
+const WHAT_TO_EXPECT = [
   {
-    title: "Full apparatus",
+    title: "The equipment",
     body:
-      "Reformers, Cadillacs, the Wunda Chair, ladder barrels. The whole language of Pilates, available in every session.",
+      "A full setup — Reformer, Cadillac, Wunda Chair, ladder barrel, and more. Equipment is chosen for each student.",
   },
   {
-    title: "Small groups",
+    title: "The format",
     body:
-      "Privates, duets, trios, and small groups. Every format is kept small enough that your instructor can see all of you, all of the time.",
+      "Privates, duets, trios, and small groups. Every session stays small enough that nothing goes unnoticed.",
   },
   {
-    title: "Trained across schools",
+    title: "The training",
     body:
-      "Our instructors hold certifications from BASI, Stott, Balanced Body, and Peak. Sara personally vets every teacher.",
+      "Certifications from BASI, Stott, Balanced Body, and Peak — and a personal vetting process for all of our teaching staff.",
   },
   {
-    title: "Contemporary, calm",
+    title: "The method",
     body:
-      "We teach the contemporary method without spectacle. Breath, alignment, control. Repetition that earns its quiet.",
+      "Contemporary Pilates, which is really just a way of saying the work isn't fixed. No set choreography, no identical sessions. Breath, alignment, and intention, applied differently every time.",
   },
 ];
 
@@ -31,7 +32,7 @@ const OFFERINGS = [
   {
     title: "Private sessions",
     body:
-      "One-on-one Pilates instruction on the Reformer and full apparatus, tailored to your body. The right place to begin.",
+      "One-on-one Pilates instruction on the Reformer and full equipment, tailored to your body. The right place to begin.",
   },
   {
     title: "Duets",
@@ -50,11 +51,11 @@ const OFFERINGS = [
   },
 ];
 
-const FOUNDERS_LIST = [
-  "Begin with a private. One hour, one instructor, full studio.",
-  "Wear something simple. Grip socks if you have them.",
-  "Arrive ten minutes early on your first visit. We will walk you through the space.",
-  "Sessions can be paused, rescheduled, or transferred without penalty.",
+const FIRST_VISIT = [
+  "Start with a private session. One hour, one instructor, the full space to yourself.",
+  "Wear comfortable, fitted clothing. Grip socks are helpful — if you need some, we usually have a few pairs on hand.",
+  "Plan to arrive ten minutes early. We'll show you around and talk through what you're hoping to get from the work.",
+  "We understand things come up. You can always put your sessions on hold, move them to another day, or pass them to a friend at no extra cost.",
 ];
 
 export default function HomePage() {
@@ -74,7 +75,7 @@ export default function HomePage() {
               <p className="mt-6 max-w-md text-base leading-relaxed text-text-2">
                 Santa Barbara Pilates is a private Pilates studio in the Funk
                 Zone, a few blocks from the beach and downtown Santa Barbara.
-                We teach contemporary Pilates on the full apparatus — Reformer,
+                We teach contemporary Pilates on the full equipment — Reformer,
                 Cadillac, Wunda Chair, and ladder barrel — in private sessions,
                 duets, trios, and small group classes.
               </p>
@@ -103,35 +104,31 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Method snapshot */}
+      {/* Our Approach */}
       <Section surface="bg">
         <Container>
           <div className="grid gap-16 md:grid-cols-12">
             <div className="md:col-span-5">
-              <Eyebrow>The Method</Eyebrow>
+              <Eyebrow>Our Approach</Eyebrow>
               <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
-                Pilates, kept close to the source.
+                Precise. Personal. Never the same twice.
               </h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-text-2">
-                We teach a careful, contemporary practice. No choreography to
-                memorise — just the apparatus, your breath, and an instructor
-                watching closely.
+                No large classes, no repeated sequences — just intentional
+                movement, evolving with you.
               </p>
               <Link
                 href="/method"
                 className="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-text link-quiet"
               >
-                Read the method
+                Read more
                 <span aria-hidden>→</span>
               </Link>
             </div>
 
             <ul className="md:col-span-7 grid gap-px bg-border md:grid-cols-2">
-              {METHOD_POINTS.map((p) => (
-                <li
-                  key={p.title}
-                  className="bg-bg p-8"
-                >
+              {WHAT_TO_EXPECT.map((p) => (
+                <li key={p.title} className="bg-bg p-8">
                   <p className="font-display text-2xl leading-snug text-text">
                     {p.title}
                   </p>
@@ -145,46 +142,62 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Sara intro */}
+      {/* Client testimonials — real Google reviews */}
+      <Testimonials />
+
+      {/* Meet our founder */}
       <Section surface="surface">
         <Container>
           <div className="grid items-start gap-16 md:grid-cols-12">
             <div className="md:col-span-5">
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image
-                  src="/sara-closeup.png"
-                  alt="Sara, founder of Santa Barbara Pilates"
-                  width={1108}
-                  height={1823}
-                  sizes="(min-width: 768px) 22rem, 80vw"
-                  className="absolute bottom-0 left-1/2 h-[85%] w-auto -translate-x-1/2"
+                  src="/the-method-2.png"
+                  alt="Sara Donen teaching at Santa Barbara Pilates"
+                  fill
+                  sizes="(min-width: 768px) 32rem, 100vw"
+                  className="object-cover object-[78%_30%]"
                 />
                 <div
                   className="pointer-events-none absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(180deg, rgba(253,250,245,0) 0%, rgba(253,250,245,0) 65%, rgba(253,250,245,0.95) 100%)",
+                      "linear-gradient(180deg, rgba(253,250,245,0) 0%, rgba(253,250,245,0) 70%, rgba(253,250,245,0.9) 100%)",
                   }}
                 />
               </div>
             </div>
 
             <div className="md:col-span-7">
-              <Eyebrow>Founder</Eyebrow>
+              <Eyebrow>Meet Our Founder</Eyebrow>
               <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
-                Sara opened the studio in 2026.
+                Sara Donen
               </h2>
+              <p className="mt-2 text-sm uppercase tracking-[0.14em] text-text-3">
+                Founder &amp; Lead Instructor
+              </p>
               <div className="prose-editorial mt-6">
                 <p>
-                  She has taught Pilates in Santa Barbara for sixteen years.
-                  The studio is her own — small, quiet, and arranged the way
-                  she wants to teach.
+                  Sara has been teaching Pilates in Santa Barbara for sixteen
+                  years. Originally from Texas, she came to California after
+                  high school and never left. Which feels right, given how much
+                  of her work is about finding where you belong in your own
+                  body.
                 </p>
                 <p>
-                  Sara is BASI-certified and continues to study with senior
-                  teachers each year. She teaches privates herself, and
-                  personally trains every instructor who joins the studio.
+                  As a dancer and yogi, Sara has spent her life moving, and has
+                  a genuine curiosity about what the mind-body connection
+                  actually means in practice, not just in theory. That
+                  background shows up in how she teaches. Sessions aren&apos;t
+                  just physical. They&apos;re attentive to you as a whole
+                  person.
                 </p>
+                <p>
+                  She lives in Santa Barbara with her husband and daughter. She
+                  understands what it means to need a place to slow down and
+                  reconnect with yourself.
+                </p>
+                <p>Santa Barbara Pilates is that place.</p>
               </div>
               <Link
                 href="/sara"
@@ -198,18 +211,18 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Founders' list */}
+      {/* Your first visit */}
       <Section surface="bg">
         <Container>
           <div className="grid gap-16 md:grid-cols-12">
             <div className="md:col-span-4">
-              <Eyebrow>If you are new</Eyebrow>
+              <Eyebrow>Your First Visit</Eyebrow>
               <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
-                A short list for first visits.
+                A few things to know before you arrive.
               </h2>
             </div>
             <ol className="md:col-span-8 space-y-6">
-              {FOUNDERS_LIST.map((line, i) => (
+              {FIRST_VISIT.map((line, i) => (
                 <li key={i} className="grid grid-cols-[3rem_1fr] gap-4">
                   <span className="font-display text-2xl text-accent-dark">
                     {String(i + 1).padStart(2, "0")}
@@ -224,32 +237,38 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Visit teaser */}
+      {/* Visit */}
       <Section surface="sage-light" className="py-24">
         <Container>
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
               <Eyebrow>Visit</Eyebrow>
               <h2 className="font-display font-semibold mt-3 text-4xl leading-[1.1] text-text md:text-5xl">
-                Adjacent to The Base Gym.
+                Find us in the Funk Zone
               </h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-text-2">
-                We are a separate studio, accessed through our own entrance.
-                Quiet, private, and easy to find. Parking is free for clients.
+                Adjacent to The Base Gym, with our own separate entrance —
+                quiet, private, and easy to find. Free parking for clients.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link href="/visit" className="btn btn-primary">
-                  Plan your visit
+              <address className="mt-4 text-base not-italic text-text">
+                123 Santa Barbara St, Santa Barbara, CA
+              </address>
+              <p className="mt-8 font-display text-2xl text-text">
+                Ready to begin?
+              </p>
+              <div className="mt-4 flex flex-wrap gap-4">
+                <Link href="/visit#book" className="btn btn-primary">
+                  Book your first session
                 </Link>
-                <Link href="/pricing" className="btn btn-outline">
-                  Pricing
+                <Link href="/visit" className="btn btn-outline">
+                  Plan your visit
                 </Link>
               </div>
             </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
                 src="/IMG_6517.jpeg"
-                alt="Inside the studio — reformers, Cadillacs, and a ladder barrel"
+                alt="Inside the studio — Reformers, Cadillacs, and a ladder barrel"
                 fill
                 sizes="(min-width: 768px) 36rem, 100vw"
                 className="object-cover"

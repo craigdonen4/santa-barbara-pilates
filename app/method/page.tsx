@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getMdx } from "@/lib/mdx";
 import { Mdx } from "@/components/Mdx";
 import { Container } from "@/components/Container";
+import { BookCta } from "@/components/BookCta";
 
 export const metadata: Metadata = {
   title: "The Method",
@@ -46,6 +47,11 @@ export default async function MethodPage() {
       <Container className="py-16 lg:py-24">
         <Mdx source={doc.source} />
       </Container>
+
+      <BookCta
+        quote="Great studio and wonderful instructors. Would highly recommend."
+        quoteName="Graham A."
+      />
     </article>
   );
 }
