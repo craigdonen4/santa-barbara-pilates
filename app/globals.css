@@ -158,6 +158,26 @@ body {
   opacity: 0.4;
 }
 
+/* Grow-on-hover for every link and button.
+   inline-block makes anchors transformable; .btn overrides with inline-flex. */
+a,
+button {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a,
+  button {
+    transition: transform 180ms ease;
+  }
+  a:hover,
+  a:focus-visible,
+  button:hover,
+  button:focus-visible {
+    transform: scale(1.05);
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

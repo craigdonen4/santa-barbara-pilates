@@ -5,17 +5,21 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-surface-2">
       <div className="absolute inset-0">
-        <video
-          className="h-full w-full object-cover opacity-90"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
+        {/* Static hero image for now. To restore the video, swap this Image
+            back to:
+            <video className="h-full w-full object-cover opacity-90"
+              autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
+              <source src="/home-page-video-2.mp4" type="video/mp4" />
+            </video> */}
+        <Image
+          src="/homepage-sub.png"
+          alt=""
           aria-hidden="true"
-        >
-          <source src="/home-page-video-2.mp4" type="video/mp4" />
-        </video>
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-90"
+        />
         <div
           className="absolute inset-0"
           style={{

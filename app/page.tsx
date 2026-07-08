@@ -267,11 +267,11 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
-                src="/IMG_6517.jpeg"
-                alt="Inside the studio — Reformers, Cadillacs, and a ladder barrel"
+                src="/the-gate.jpeg"
+                alt="The black arched gate at the studio entrance, framed by greenery"
                 fill
                 sizes="(min-width: 768px) 36rem, 100vw"
-                className="object-cover"
+                className="object-cover object-[50%_58%]"
               />
               <div
                 className="pointer-events-none absolute inset-0"
