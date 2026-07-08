@@ -89,16 +89,40 @@ export default function HomePage() {
             </div>
 
             <ul className="md:col-span-7 grid gap-px bg-border md:grid-cols-2">
-              {OFFERINGS.map((o) => (
-                <li key={o.title} className="bg-surface p-8">
-                  <p className="font-display text-2xl leading-snug text-text">
-                    {o.title}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-text-2">
-                    {o.body}
-                  </p>
-                </li>
-              ))}
+              {/* Checkerboard: tiles 1 and 4 (top-left, bottom-right) in teal,
+                  each with a dark-to-light sweep left to right. */}
+              {OFFERINGS.map((o, i) => {
+                const teal = i === 0 || i === 3;
+                return (
+                  <li
+                    key={o.title}
+                    className={teal ? "p-8" : "bg-surface p-8"}
+                    style={
+                      teal
+                        ? {
+                            background:
+                              "linear-gradient(90deg, #093F4B 0%, #0E5C6A 55%, #1E7A8E 100%)",
+                          }
+                        : undefined
+                    }
+                  >
+                    <p
+                      className={`font-display text-2xl leading-snug ${
+                        teal ? "text-surface" : "text-text"
+                      }`}
+                    >
+                      {o.title}
+                    </p>
+                    <p
+                      className={`mt-3 text-sm leading-relaxed ${
+                        teal ? "text-surface/85" : "text-text-2"
+                      }`}
+                    >
+                      {o.body}
+                    </p>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </Container>

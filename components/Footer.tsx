@@ -36,6 +36,9 @@ export function Footer() {
             <p className="eyebrow">Practice</p>
             <ul className="mt-4 space-y-2 text-sm text-text-2">
               <li>
+                <Link href="/yoga" className="link-quiet">Yoga</Link>
+              </li>
+              <li>
                 <Link href="/pricing" className="link-quiet">Pricing</Link>
               </li>
               <li>

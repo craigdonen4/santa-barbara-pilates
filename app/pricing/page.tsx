@@ -94,11 +94,11 @@ export default async function PricingPage() {
                   {Array.from({ length: reformerCount(c) }).map((_, i) => (
                     <Image
                       key={i}
-                      src="/reformer-icon.png"
+                      src="/reformer-icon-2.png"
                       alt=""
-                      width={435}
-                      height={139}
-                      className="h-4 w-auto opacity-80"
+                      width={1159}
+                      height={316}
+                      className="h-4 w-auto"
                     />
                   ))}
                 </div>
