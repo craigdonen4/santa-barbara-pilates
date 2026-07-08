@@ -13,50 +13,33 @@ const NAV = [
 export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-bg/85 backdrop-blur-md">
-      <div className="mx-auto flex h-28 max-w-[76rem] items-center justify-between px-6 lg:px-10">
-        {/* Partnership card — The Base and SBP under one roof, one rectangle.
-            Base logo links out (backlink); SBP logo links home. */}
-        <div
-          className="flex items-center gap-3 border border-text px-3 py-2 md:gap-4 md:px-4"
-          style={{
-            background:
-              "linear-gradient(135deg, #FFFFFF 0%, var(--color-surface) 45%, var(--color-bg) 100%)",
-          }}
-        >
-          <a
-            href="https://www.thebasesantabarbara.com"
-            target="_blank"
-            rel="noopener"
-            aria-label="The Base Santa Barbara — visit their site"
-            className="block"
-          >
-            <Image
-              src="/base-logo.jpeg"
-              alt="The Base"
-              width={1280}
-              height={568}
-              sizes="(min-width: 768px) 96px, 72px"
-              className="h-8 w-auto md:h-10"
-            />
-          </a>
+      <div className="mx-auto flex h-24 max-w-[76rem] items-center justify-between px-6 lg:px-10">
+        {/* Home mark + Book — far left */}
+        <div className="flex items-center gap-4">
           <Link
             href="/"
             aria-label="Santa Barbara Pilates — home"
             className="block"
           >
             <Image
-              src="/sbp-logo.png"
-              alt="Santa Barbara Pilates"
-              width={1955}
-              height={2068}
+              src="/sbp-mark.png"
+              alt="Santa Barbara Pilates home"
+              width={1321}
+              height={1191}
               priority
-              sizes="(min-width: 768px) 80px, 64px"
-              className="h-16 w-auto md:h-20"
+              sizes="56px"
+              className="h-12 w-auto md:h-14"
             />
+          </Link>
+          <Link
+            href="/visit#book"
+            className="btn btn-outline hidden md:inline-flex"
+          >
+            Book
           </Link>
         </div>
 
-        {/* Nav links grouped on the right, next to Book */}
+        {/* Nav links + partnership card grouped on the right */}
         <div className="flex items-center gap-8">
           <nav className="hidden items-center gap-8 md:flex">
             {NAV.map((item) => (
@@ -70,12 +53,48 @@ export function Nav() {
             ))}
           </nav>
 
-          <Link
-            href="/visit#book"
-            className="btn btn-outline hidden md:inline-flex"
+          {/* Partnership card — The Base and SBP under one roof, one
+              rectangle, far right. Base logo links out (backlink);
+              SBP logo links home. */}
+          <div
+            className="flex items-center gap-3 border border-text px-3 py-1 md:gap-4 md:px-4"
+            style={{
+              background:
+                "linear-gradient(90deg, var(--color-surface-2) 0%, var(--color-surface) 55%, #FFFFFF 100%)",
+            }}
           >
-            Book
-          </Link>
+            <a
+              href="https://www.thebasesantabarbara.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="The Base Santa Barbara — visit their site"
+              className="block"
+            >
+              <Image
+                src="/base-logo.jpeg"
+                alt="The Base"
+                width={1280}
+                height={568}
+                sizes="(min-width: 768px) 80px, 64px"
+                className="h-7 w-auto md:h-8"
+              />
+            </a>
+            <Link
+              href="/"
+              aria-label="Santa Barbara Pilates — home"
+              className="block"
+            >
+              <Image
+                src="/sbp-logo.png"
+                alt="Santa Barbara Pilates"
+                width={1955}
+                height={2068}
+                priority
+                sizes="(min-width: 768px) 64px, 56px"
+                className="h-12 w-auto md:h-14"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </header>

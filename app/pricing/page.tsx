@@ -41,11 +41,13 @@ export default async function PricingPage() {
             sizes="100vw"
             className="object-cover object-[50%_60%]"
           />
+          {/* Same treatment as the homepage hero: solid cream on the left
+              for text legibility, fading clear to the right. */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, rgba(245,240,232,0.20) 0%, rgba(245,240,232,0.55) 60%, rgba(245,240,232,0.95) 100%)",
+                "linear-gradient(90deg, rgba(245,240,232,0.95) 0%, rgba(245,240,232,0.72) 38%, rgba(245,240,232,0.18) 68%, rgba(245,240,232,0) 100%), linear-gradient(180deg, rgba(245,240,232,0) 75%, rgba(245,240,232,0.55) 100%)",
             }}
           />
         </div>
@@ -55,7 +57,7 @@ export default async function PricingPage() {
           <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-teal md:text-7xl">
             Pricing
           </h1>
-          <p className="mt-6 max-w-xl text-base font-medium leading-relaxed text-text md:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
             Sessions are fifty minutes, with close, individual attention. Most
             clients begin one-on-one, then move into a duet, trio, or small
             group as they&apos;d like once the work becomes familiar.
