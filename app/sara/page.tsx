@@ -16,10 +16,12 @@ export default async function AboutPage() {
 
   return (
     <article>
-      <header className="border-b border-border bg-surface pt-16 pb-10 lg:pt-20 lg:pb-14">
+      <header className="bg-teal pt-16 pb-10 lg:pt-20 lg:pb-14">
         <Container>
-          <p className="eyebrow">Our Team</p>
-          <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-teal md:text-7xl">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-surface/75">
+            Our Team
+          </p>
+          <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-surface md:text-7xl">
             {title}
           </h1>
         </Container>
