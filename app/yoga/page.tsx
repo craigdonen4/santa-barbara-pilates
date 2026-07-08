@@ -26,10 +26,11 @@ export default function YogaPage() {
       <Container className="pt-10 pb-16 lg:pt-12 lg:pb-24">
         <div className="prose-editorial">
           <p>
-            Yoga at Santa Barbara Pilates follows the same idea as everything
-            else we do: small sessions, close attention, and a practice shaped
-            around the person in front of us. We offer privates and small
-            groups, taught in the same quiet room in the Funk Zone.
+            Breath, stillness, and strength — taught the way we teach
+            everything here. Private sessions and small groups in a quiet
+            room in the heart of the Funk Zone, with a practice built around
+            you. Whether you&apos;re new to the mat or decades in, the work
+            meets you where you are.
           </p>
 
           <h2>Meet Nuria</h2>

@@ -3,8 +3,6 @@
 -- Additive only. Anon has NO direct table access — all reads/writes go
 -- through SECURITY DEFINER functions that expose only safe fields.
 
-create extension if not exists pgcrypto;
-
 create table if not exists public.invites (
   id uuid primary key default gen_random_uuid(),
   token text unique not null,
@@ -51,7 +49,9 @@ begin
     raise exception 'Invalid payment mode.';
   end if;
 
-  v_token := encode(gen_random_bytes(9), 'hex');
+  -- core pg function, no extension needed (pgcrypto lives in the
+  -- `extensions` schema on Supabase and isn't on this search_path)
+  v_token := replace(gen_random_uuid()::text, '-', '');
   v_first := split_part(trim(p_host_name), ' ', 1);
   v_last  := nullif(trim(substr(trim(p_host_name), length(v_first) + 1)), '');
 
