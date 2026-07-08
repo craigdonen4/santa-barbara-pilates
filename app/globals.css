@@ -158,6 +158,22 @@ body {
   opacity: 0.4;
 }
 
+/* Feather quill cursor, tip at the top-left hotspot. Falls back to the
+   system cursor where custom cursors are unsupported (and on touch
+   devices the rule is inert). Text fields keep the I-beam. */
+html,
+body {
+  cursor: url("/cursor-feather.png") 2 2, auto;
+}
+
+a,
+button,
+label,
+select,
+[role="button"] {
+  cursor: url("/cursor-feather.png") 2 2, pointer;
+}
+
 /* Grow-on-hover for every link and button.
    inline-block makes anchors transformable; .btn overrides with inline-flex. */
 a,

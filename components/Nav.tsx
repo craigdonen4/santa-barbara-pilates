@@ -57,7 +57,7 @@ export function Nav() {
               rectangle, far right. Base logo links out (backlink);
               SBP logo links home. */}
           <div
-            className="flex items-center gap-3 border border-text px-3 py-1 md:gap-4 md:px-4"
+            className="ml-4 flex items-center gap-3 border border-text px-3 py-1 md:ml-6 md:gap-4 md:px-4"
             style={{
               background:
                 "linear-gradient(90deg, var(--color-surface-2) 0%, var(--color-surface) 55%, #FFFFFF 100%)",
