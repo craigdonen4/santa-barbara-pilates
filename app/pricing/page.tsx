@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { BookCta } from "@/components/BookCta";
 import { supabase, type ClassType } from "@/lib/supabase";
@@ -124,6 +125,26 @@ export default async function PricingPage() {
             </li>
           ))}
         </ul>
+
+        {/* Bring-a-friend invite */}
+        <div className="mt-16 border border-border bg-surface p-8 md:p-10">
+          <div className="flex flex-wrap items-center justify-between gap-6">
+            <div className="max-w-xl">
+              <p className="eyebrow">Bring a Friend</p>
+              <h2 className="font-display font-semibold mt-2 text-3xl leading-tight text-text">
+                Want to try it together?
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-text-2">
+                Create an invite link and send it to a friend — cover their
+                spot as a treat, or each pay your own. One session, no
+                commitment.
+              </p>
+            </div>
+            <Link href="/partner" className="btn btn-primary">
+              Create an invite
+            </Link>
+          </div>
+        </div>
       </Container>
 
       <BookCta

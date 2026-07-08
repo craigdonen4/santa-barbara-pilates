@@ -47,6 +47,9 @@ export function Footer() {
               <li>
                 <Link href="/visit#book" className="link-quiet">Book a session</Link>
               </li>
+              <li>
+                <Link href="/partner" className="link-quiet">Bring a friend</Link>
+              </li>
             </ul>
           </div>
 
