@@ -22,13 +22,13 @@ export function Nav() {
             className="block"
           >
             <Image
-              src="/sbp-mark.png"
+              src="/sbp-mark-clear.png"
               alt="Santa Barbara Pilates home"
-              width={1321}
-              height={1191}
+              width={452}
+              height={1075}
               priority
-              sizes="56px"
-              className="h-12 w-auto md:h-14"
+              sizes="48px"
+              className="h-24 w-auto"
             />
           </Link>
           <Link
@@ -75,8 +75,8 @@ export function Nav() {
                 alt="The Base"
                 width={1280}
                 height={568}
-                sizes="(min-width: 768px) 80px, 64px"
-                className="h-7 w-auto md:h-8"
+                sizes="(min-width: 768px) 104px, 80px"
+                className="h-9 w-auto md:h-11"
               />
             </a>
             <Link
