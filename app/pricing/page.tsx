@@ -88,7 +88,7 @@ export default async function PricingPage() {
                   {c.name}
                 </h2>
                 <div
-                  className="mt-3 flex flex-wrap gap-2"
+                  className="mt-6 flex flex-wrap gap-2"
                   aria-hidden="true"
                 >
                   {Array.from({ length: reformerCount(c) }).map((_, i) => (
