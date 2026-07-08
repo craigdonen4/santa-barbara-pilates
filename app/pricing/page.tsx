@@ -17,6 +17,14 @@ function formatPrice(cents: number | null) {
   return `$${(cents / 100).toFixed(0)}`;
 }
 
+/** One reformer per person in the session format. */
+function reformerCount(c: ClassType): number {
+  if (c.session_type === "private") return 1;
+  if (c.session_type === "duet") return 2;
+  if (c.name.toLowerCase().includes("trio")) return 3;
+  return 4;
+}
+
 export default async function PricingPage() {
   const { data } = await supabase
     .from("class_types")
@@ -79,6 +87,21 @@ export default async function PricingPage() {
                 <h2 className="font-display font-semibold text-3xl leading-tight text-text">
                   {c.name}
                 </h2>
+                <div
+                  className="mt-3 flex flex-wrap gap-2"
+                  aria-hidden="true"
+                >
+                  {Array.from({ length: reformerCount(c) }).map((_, i) => (
+                    <Image
+                      key={i}
+                      src="/reformer-icon.png"
+                      alt=""
+                      width={435}
+                      height={139}
+                      className="h-4 w-auto opacity-80"
+                    />
+                  ))}
+                </div>
               </div>
               <div className="col-span-12 md:col-span-6">
                 <p className="text-base leading-relaxed text-text-2">
