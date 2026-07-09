@@ -163,7 +163,7 @@ body {
    devices the rule is inert). Text fields keep the I-beam. */
 html,
 body {
-  cursor: url("/cursor-feather.png") 1 30, auto;
+  cursor: url("/cursor-feather.png") 24 13, auto;
 }
 
 a,
@@ -171,7 +171,7 @@ button,
 label,
 select,
 [role="button"] {
-  cursor: url("/cursor-feather.png") 1 30, pointer;
+  cursor: url("/cursor-feather.png") 24 13, pointer;
 }
 
 /* Grow-on-hover for every link and button.
@@ -206,7 +206,7 @@ button {
   text-transform: uppercase;
   border-radius: 0;
   transition: all 200ms ease;
-  cursor: pointer;
+  cursor: url("/cursor-feather.png") 24 13, pointer;
   border: 1px solid transparent;
 }
 
