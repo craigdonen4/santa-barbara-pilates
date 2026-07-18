@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SBP × The Base — Raffle Ticket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #ffffff; }
+  .page {
+    width: 8.5in; height: 11in; margin: 0 auto; background: #FFFFFF;
+    font-family: 'Inter', sans-serif; color: #2C2A25;
+    display: flex; flex-direction: column; overflow: hidden;
+    padding: 0.45in 0.65in 0;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  @media print { html, body { background: none; } }
+
+  /* Partnership lockup — same treatment as the site nav */
+  .lockup {
+    align-self: center; display: flex; align-items: center; gap: 0.32in;
+    border: 1px solid #111111; padding: 0.12in 0.3in;
+    background: #FFFFFF;
+  }
+  .lockup img.base { height: 0.42in; }
+  .lockup img.sbp { height: 0.85in; }
+
+  .eyebrow {
+    margin-top: 0.22in; text-align: center;
+    font-size: 13px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: #666666; font-weight: 600;
+  }
+  h1 {
+    margin-top: 6px; text-align: center;
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 52px; line-height: 1.02; color: #111111;
+  }
+  .prizes {
+    margin: 10px auto 0; max-width: 6.6in; text-align: center;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 19px; line-height: 1.45; color: #444444;
+  }
+
+  .fields { margin-top: 0.2in; }
+  .row { display: flex; gap: 0.5in; margin-top: 0.2in; }
+  .field { flex: 1; display: flex; align-items: baseline; gap: 10px; }
+  .field label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #555555; font-weight: 600; white-space: nowrap;
+  }
+  .field .line { flex: 1; border-bottom: 1px solid #888888; height: 1.1em; }
+
+  .tour { margin-top: 0.18in; }
+  .tour .label {
+    font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: #666666; font-weight: 600; text-align: center;
+  }
+  .tour .how {
+    margin: 8px auto 0; max-width: 6.8in; text-align: center;
+    font-size: 13.5px; line-height: 1.7; color: #444444;
+  }
+  .tour .how strong { color: #111111; font-weight: 600; }
+  .map { margin: 0.1in auto 0; text-align: center; }
+  .map img { width: 4.9in; height: auto; }
+
+  .strip {
+    margin: auto 0 0.75in; padding: 0.18in 0.4in 0.2in;
+    border: 2px solid #111111;
+    text-align: center;
+  }
+  .strip .big {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 28px; color: #111111;
+  }
+  .strip .small {
+    margin-top: 4px; font-size: 13px; letter-spacing: 0.06em;
+    color: #555555;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="lockup">
+    <img class="base" src="../public/base-logo.jpeg" alt="The Base">
+    <img class="sbp" src="sbp-logo-bw.png" alt="Santa Barbara Pilates">
+  </div>
+
+  <div class="eyebrow">Grand Opening &nbsp;·&nbsp; Saturday, July 18</div>
+  <h1>Raffle Ticket</h1>
+  <p class="prizes">Win a month of membership, Pilates sessions, group training, personal training, Reiki, T-shirts, and other Base-tastic prizes.</p>
+
+  <div class="fields">
+    <div class="row">
+      <div class="field"><label>Name</label><span class="line"></span></div>
+    </div>
+    <div class="row">
+      <div class="field"><label>Phone</label><span class="line"></span></div>
+      <div class="field"><label>Email</label><span class="line"></span></div>
+    </div>
+  </div>
+
+  <div class="tour">
+    <div class="label">The Tour</div>
+    <p class="how">
+      Start in <strong>The Base gym</strong>, cross <strong>the courtyard</strong>,
+      pass through <strong>the recovery area</strong>, and finish upstairs at
+      <strong>Santa Barbara Pilates</strong>.
+    </p>
+    <div class="map">
+      <img src="tour-map-bw.png" alt="Tour map — Start at The Base Gym, then the Courtyard, Recovery Area, and finish at Santa Barbara Pilates">
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="big">Drop this ticket at the Pilates studio to enter.</div>
+    <div class="small">Then enjoy a specialty drink at Dart on us — while they last.</div>
+  </div>
+</div>
+</body>
+</html>
