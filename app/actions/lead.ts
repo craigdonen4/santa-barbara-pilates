@@ -13,6 +13,8 @@ export async function submitLead(formData: FormData): Promise<LeadResult> {
   const email = String(formData.get("email") ?? "").trim();
   const phone = String(formData.get("phone") ?? "").trim();
   const notes = String(formData.get("notes") ?? "").trim();
+  const interest = String(formData.get("interest") ?? "").trim();
+  const preferred_time = String(formData.get("preferred_time") ?? "").trim();
   const honey = String(formData.get("website") ?? "");
 
   if (honey) {
@@ -29,12 +31,24 @@ export async function submitLead(formData: FormData): Promise<LeadResult> {
     return { ok: false, error: "A phone number is required." };
   }
 
+  // Fold the preferences into the note too, so Sara sees the full context
+  // even at a glance — the structured columns still drive the portal chips.
+  const context = [
+    interest ? `Interested in: ${interest.split(",").join(", ")}` : "",
+    preferred_time ? `Prefers: ${preferred_time.split(",").join(", ")}` : "",
+  ]
+    .filter(Boolean)
+    .join(" · ");
+  const fullNotes = [notes, context].filter(Boolean).join("\n\n") || null;
+
   const { error } = await supabase.from("leads").insert({
     first_name,
     last_name: last_name || null,
     email,
     phone,
-    notes: notes || null,
+    notes: fullNotes,
+    interest: interest || null,
+    preferred_time: preferred_time || null,
     source: "website",
   });
 
@@ -61,10 +75,16 @@ export async function submitLead(formData: FormData): Promise<LeadResult> {
           `Name: ${displayName}`,
           `Email: ${email}`,
           `Phone: ${phone || "(not provided)"}`,
+          interest ? `Interested in: ${interest.split(",").join(", ")}` : "",
+          preferred_time
+            ? `Preferred time: ${preferred_time.split(",").join(", ")}`
+            : "",
           "",
           "Message:",
           notes || "(no message)",
-        ].join("\n"),
+        ]
+          .filter((line) => line !== "")
+          .join("\n"),
       });
     } catch {
       // Lead is saved; email notification is best-effort.

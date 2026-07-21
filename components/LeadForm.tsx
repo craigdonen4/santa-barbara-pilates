@@ -5,14 +5,39 @@ import { submitLead } from "@/app/actions/lead";
 
 type Status = "idle" | "submitting" | "ok" | "error";
 
+// These MUST match the portal's option strings exactly (lib/leads.ts →
+// INTEREST_OPTIONS / TIME_OPTIONS) so the portal's toggles highlight them.
+const INTEREST_OPTIONS = ["Private", "Duet", "Group"] as const;
+const TIME_OPTIONS = [
+  "Early morning",
+  "Morning",
+  "Midday",
+  "Afternoon",
+  "Evening",
+] as const;
+
 export function LeadForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string>("");
+  const [interest, setInterest] = useState<string[]>([]);
+  const [times, setTimes] = useState<string[]>([]);
   const [isPending, startTransition] = useTransition();
+
+  function toggle(
+    list: string[],
+    setList: (v: string[]) => void,
+    value: string
+  ) {
+    setList(
+      list.includes(value) ? list.filter((v) => v !== value) : [...list, value]
+    );
+  }
 
   async function action(formData: FormData) {
     setStatus("submitting");
     setErrorMsg("");
+    formData.set("interest", interest.join(","));
+    formData.set("preferred_time", times.join(","));
     const result = await submitLead(formData);
     if (result.ok) {
       setStatus("ok");
@@ -54,11 +79,7 @@ export function LeadForm() {
           required
           autoComplete="given-name"
         />
-        <Field
-          label="Last name"
-          name="last_name"
-          autoComplete="family-name"
-        />
+        <Field label="Last name" name="last_name" autoComplete="family-name" />
       </div>
       <Field
         label="Email"
@@ -67,13 +88,22 @@ export function LeadForm() {
         required
         autoComplete="email"
       />
-      <Field
-        label="Phone"
-        name="phone"
-        type="tel"
-        required
-        autoComplete="tel"
+      <Field label="Phone" name="phone" type="tel" required autoComplete="tel" />
+
+      <Chips
+        label="What are you interested in?"
+        options={INTEREST_OPTIONS}
+        selected={interest}
+        onToggle={(v) => toggle(interest, setInterest, v)}
       />
+
+      <Chips
+        label="Preferred time (optional)"
+        options={TIME_OPTIONS}
+        selected={times}
+        onToggle={(v) => toggle(times, setTimes, v)}
+      />
+
       <FieldArea
         label="A little about you"
         name="notes"
@@ -92,6 +122,44 @@ export function LeadForm() {
         {isPending || status === "submitting" ? "Sending…" : "Send"}
       </button>
     </form>
+  );
+}
+
+function Chips({
+  label,
+  options,
+  selected,
+  onToggle,
+}: {
+  label: string;
+  options: readonly string[];
+  selected: string[];
+  onToggle: (value: string) => void;
+}) {
+  return (
+    <div>
+      <span className="eyebrow">{label}</span>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {options.map((opt) => {
+          const on = selected.includes(opt);
+          return (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => onToggle(opt)}
+              aria-pressed={on}
+              className={`border px-4 py-2 text-sm transition-colors ${
+                on
+                  ? "border-text bg-text text-surface"
+                  : "border-border bg-transparent text-text-2 hover:border-text-3"
+              }`}
+            >
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
