@@ -19,24 +19,21 @@ const TIME_OPTIONS = [
 export function LeadForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState<string>("");
-  const [interest, setInterest] = useState<string[]>([]);
+  // Interest is single-select (pick one primary format); times are multi.
+  const [interest, setInterest] = useState<string>("");
   const [times, setTimes] = useState<string[]>([]);
   const [isPending, startTransition] = useTransition();
 
-  function toggle(
-    list: string[],
-    setList: (v: string[]) => void,
-    value: string
-  ) {
-    setList(
-      list.includes(value) ? list.filter((v) => v !== value) : [...list, value]
+  function toggleTime(value: string) {
+    setTimes((prev) =>
+      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
     );
   }
 
   async function action(formData: FormData) {
     setStatus("submitting");
     setErrorMsg("");
-    formData.set("interest", interest.join(","));
+    formData.set("interest", interest);
     formData.set("preferred_time", times.join(","));
     const result = await submitLead(formData);
     if (result.ok) {
@@ -93,15 +90,15 @@ export function LeadForm() {
       <Chips
         label="What are you interested in?"
         options={INTEREST_OPTIONS}
-        selected={interest}
-        onToggle={(v) => toggle(interest, setInterest, v)}
+        selected={interest ? [interest] : []}
+        onToggle={(v) => setInterest((prev) => (prev === v ? "" : v))}
       />
 
       <Chips
         label="Preferred time (optional)"
         options={TIME_OPTIONS}
         selected={times}
-        onToggle={(v) => toggle(times, setTimes, v)}
+        onToggle={toggleTime}
       />
 
       <FieldArea

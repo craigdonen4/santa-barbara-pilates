@@ -7,14 +7,41 @@ type LeadResult =
   | { ok: true }
   | { ok: false; error: string };
 
+// Allowed values — MUST match the portal (lib/leads.ts). We only ever store
+// exact matches to these, deduped, so the portal's exact-match chips can't be
+// tripped by unexpected input.
+const INTEREST_OPTIONS = ["Private", "Duet", "Group"];
+const TIME_OPTIONS = [
+  "Early morning",
+  "Morning",
+  "Midday",
+  "Afternoon",
+  "Evening",
+];
+
+/** Keep only recognized options, in canonical order, no duplicates. */
+function cleanList(raw: string, allowed: string[]): string {
+  const picked = raw
+    .split(",")
+    .map((s) => s.trim())
+    .filter((s) => allowed.includes(s));
+  return allowed.filter((o) => picked.includes(o)).join(",");
+}
+
 export async function submitLead(formData: FormData): Promise<LeadResult> {
   const first_name = String(formData.get("first_name") ?? "").trim();
   const last_name = String(formData.get("last_name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const phone = String(formData.get("phone") ?? "").trim();
   const notes = String(formData.get("notes") ?? "").trim();
-  const interest = String(formData.get("interest") ?? "").trim();
-  const preferred_time = String(formData.get("preferred_time") ?? "").trim();
+  const interest = cleanList(
+    String(formData.get("interest") ?? ""),
+    INTEREST_OPTIONS
+  );
+  const preferred_time = cleanList(
+    String(formData.get("preferred_time") ?? ""),
+    TIME_OPTIONS
+  );
   const honey = String(formData.get("website") ?? "");
 
   if (honey) {
