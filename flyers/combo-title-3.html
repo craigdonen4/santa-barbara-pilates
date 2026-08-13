@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Combo Program — The Base × SBP (Instagram)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #333; }
+  .post {
+    width: 1080px; height: 1350px; margin: 0 auto; background: #0A0A0A;
+    font-family: 'Inter', sans-serif; color: #FDFAF5;
+    display: flex; flex-direction: column; overflow: hidden;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+
+  /* Top teal band with the joint eyebrow + headline */
+  .head {
+    background: transparent;
+    padding: 60px 70px 8px; text-align: center; color: #FDFAF5;
+  }
+  .head h1 {
+    font-weight: 700; font-size: 66px; line-height: 1.02;
+    letter-spacing: -0.02em; margin-top: 0;
+  }
+  .head .sub {
+    font-size: 26px; font-weight: 300; color: rgba(253,250,245,0.9);
+    margin-top: 16px; letter-spacing: 0.01em;
+  }
+  .offer {
+    margin: 42px auto 0; text-align: center;
+    font-size: 23px; font-weight: 500; color: #E7C9A3; letter-spacing: 0.01em;
+  }
+
+  /* Black body */
+  .body {
+    flex: 1; padding: 40px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+
+  /* Feather divider between the title and the photos */
+  .feather { display: block; width: 300px; height: auto; margin: 0 auto 40px; }
+
+  /* Photo chain across the top — near-square so people aren't cropped */
+  .chain { display: flex; gap: 16px; }
+  .col { flex: 1; display: flex; flex-direction: column; }
+  .col img {
+    width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.14);
+  }
+  .col .cap {
+    text-align: center; margin-top: 22px;
+    font-weight: 600; font-size: 30px; line-height: 1.1;
+    letter-spacing: -0.01em; color: #FDFAF5;
+  }
+
+  /* Benefits paragraph */
+  .lede {
+    margin: 46px auto 0; max-width: 880px; text-align: center;
+    font-size: 25px; line-height: 1.55; color: #DCD6CB; font-weight: 300;
+  }
+  .lede b { color: #F0E5D2; font-weight: 600; }
+
+  .cadence {
+    text-align: center; margin-top: 34px;
+    font-size: 19px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #C4956A; font-weight: 600;
+  }
+  .cta {
+    text-align: center; margin-top: 26px;
+    font-size: 24px; font-weight: 400; color: #E6E1D8;
+  }
+
+  /* Cream footer bar so both dark logos read */
+  .footer {
+    background: #F5F0E8; padding: 28px 70px 34px;
+    display: flex; align-items: center; justify-content: center; gap: 56px;
+  }
+  .footer img.base { height: 90px; }
+  .footer img.sbp { height: 176px; }
+</style>
+</head>
+<body>
+<div class="post">
+  <div class="head">
+    <h1>Effort, then ease.</h1>
+    <div class="sub">Strength, core, mobility &amp; recovery — all in one.</div>
+  </div>
+
+  <div class="body">
+    <img class="feather" src="feather-horizontal.png" alt="">
+    <div class="chain">
+      <div class="col">
+        <img src="combo-pilates.png" style="object-position: 40% 45%;" alt="Pilates">
+        <div class="cap">Pilates</div>
+      </div>
+      <div class="col">
+        <img src="combo-base.png" style="object-position: 55% 50%;" alt="Personal training">
+        <div class="cap">Personal&nbsp;Training</div>
+      </div>
+      <div class="col">
+        <img src="combo-recovery.jpg" style="object-position: 40% 50%;" alt="Recovery">
+        <div class="cap">Recovery</div>
+      </div>
+    </div>
+
+    <div class="offer">1 Pilates and 1 Personal Training = 2 sessions per week, on your schedule.</div>
+
+    <p class="lede">
+      Three disciplines, one weekly rhythm. <b>Pilates</b> refines control, core, and
+      precision. <b>Personal training</b> builds real-world strength and power.
+      <b>Sauna and cold plunge</b> speed recovery — so each session takes hold and you
+      come back stronger. Everything your body needs, under one roof.
+    </p>
+
+    <div class="cadence">Every week &nbsp;·&nbsp; One combo package</div>
+
+    <p class="cta">Book your combo at santabarbarapilates.com</p>
+  </div>
+
+  <div class="footer">
+    <img class="base" src="../public/base-logo.jpeg" alt="The Base">
+    <img class="sbp" src="../public/sbp-logo.png" alt="Santa Barbara Pilates">
+  </div>
+</div>
+</body>
+</html>
