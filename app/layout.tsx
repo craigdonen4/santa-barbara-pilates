@@ -40,8 +40,9 @@ export const metadata: Metadata = {
 
 // Structured data for Google local results. Keep in sync with the
 // Google Business Profile: same name, address, and category.
-// TODO before final: confirm postal code + add telephone once the
-// studio number is public.
+// 123 Santa Barbara St is the studio's official address; the public
+// entrance is through The Base at 122 Gray Ave (see /visit).
+// Phone matches the Google Business Profile listing.
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "ExerciseGym",
@@ -50,6 +51,7 @@ const localBusinessJsonLd = {
   description:
     "A private Pilates studio in the Funk Zone, Santa Barbara. Contemporary training on the full apparatus — privates, duets, trios, and small groups.",
   url: "https://santabarbarapilates.com",
+  telephone: "+1-805-635-8337",
   image: "https://santabarbarapilates.com/og-image.jpg",
   logo: "https://santabarbarapilates.com/sbp-logo.png",
   address: {

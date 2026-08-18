@@ -38,9 +38,10 @@ export default function VisitPage() {
             Visit us
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-text-2 md:text-lg">
-            We are in the heart of the Funk Zone, adjacent to The Base Gym,
-            with a separate entrance and our own quiet room. New clients
-            begin with a short studio tour before their first session.
+            We are in the heart of the Funk Zone, sharing our home with
+            The Base gym. Enter through The Base at 122 Gray Ave — the staff
+            will walk you through the gym to the studio. New clients begin
+            with a short tour before their first session.
           </p>
         </div>
       </section>
@@ -48,14 +49,24 @@ export default function VisitPage() {
       <Container className="py-16 lg:py-24">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <p className="eyebrow">Address</p>
+            <p className="eyebrow">Entrance &amp; tours</p>
             <address className="mt-3 font-display text-2xl not-italic leading-snug text-text">
-              123 Santa Barbara St
+              122 Gray Ave
               <br />
-              Santa Barbara, California
+              at The Base
             </address>
-            <p className="mt-3 text-sm italic text-text-3">
-              In the heart of the Funk Zone.
+            <p className="mt-3 text-sm leading-relaxed text-text-2">
+              Want a quick tour? Come to our main entrance at The Base —
+              our friendly staff will take you to the studio.
+            </p>
+            <p className="mt-6 text-sm leading-relaxed text-text-3">
+              Studio address: 123 Santa Barbara St, Santa Barbara, CA.
+              The street gate stays locked — please enter on Gray Ave.
+            </p>
+            <p className="mt-4 text-base text-text-2">
+              <a href="tel:+18056358337" className="link-quiet">
+                (805) 635-8337
+              </a>
             </p>
           </div>
 
@@ -83,8 +94,9 @@ export default function VisitPage() {
             <div className="sm:col-span-2">
               <p className="eyebrow">A note on the gym</p>
               <p className="mt-2 text-base leading-relaxed text-text-2">
-                We share a building with The Base Gym but operate
-                independently. Our entrance, room, and equipment are our own.
+                We share our home with The Base gym and enter through
+                their front door at 122 Gray Ave. The studio itself is our
+                own — a quiet, private room with our own equipment.
               </p>
             </div>
           </div>
@@ -94,8 +106,8 @@ export default function VisitPage() {
           <p className="eyebrow">Find us</p>
           <div className="mt-4 relative aspect-[16/9] w-full overflow-hidden border border-border">
             <iframe
-              src="https://www.google.com/maps?q=123+Santa+Barbara+St,+Santa+Barbara,+CA&output=embed"
-              title="Map of Santa Barbara Pilates — 123 Santa Barbara St"
+              src="https://www.google.com/maps?q=122+Gray+Ave,+Santa+Barbara,+CA&output=embed"
+              title="Entrance to Santa Barbara Pilates — 122 Gray Ave at The Base"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 h-full w-full"

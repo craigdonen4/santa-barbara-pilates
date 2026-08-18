@@ -271,11 +271,14 @@ export default function HomePage() {
                 Find us in the Funk Zone
               </h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-text-2">
-                Adjacent to The Base Gym, with our own separate entrance —
-                quiet, private, and easy to find. Free parking for clients.
+                Our studio lives with The Base gym. Come to the main
+                entrance at 122 Gray Ave and the staff will walk you through
+                to the studio. Free parking for clients.
               </p>
               <address className="mt-4 text-base not-italic text-text">
-                123 Santa Barbara St, Santa Barbara, CA
+                Enter at 122 Gray Ave, at The Base
+                <br />
+                Studio: 123 Santa Barbara St, Santa Barbara, CA
               </address>
               <p className="mt-8 font-display text-2xl text-text">
                 Ready to begin?
@@ -292,7 +295,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
                 src="/the-gate.jpeg"
-                alt="The black arched gate at the studio entrance, framed by greenery"
+                alt="The black arched gate at the studio on Santa Barbara St, framed by greenery"
                 fill
                 sizes="(min-width: 768px) 36rem, 100vw"
                 className="object-cover object-[50%_58%]"

@@ -56,11 +56,17 @@ export function Footer() {
           <div>
             <p className="eyebrow">Find us</p>
             <address className="mt-4 text-sm not-italic leading-relaxed text-text-2">
-              123 Santa Barbara St
+              Enter at 122 Gray Ave, at The Base
+              <br />
+              Studio: 123 Santa Barbara St
               <br />
               The Funk Zone, Santa Barbara
             </address>
             <p className="mt-4 text-sm text-text-2">
+              <a href="tel:+18056358337" className="link-quiet">
+                (805) 635-8337
+              </a>
+              <br />
               <a href="mailto:hello@santabarbarapilates.com" className="link-quiet">
                 hello@santabarbarapilates.com
               </a>
