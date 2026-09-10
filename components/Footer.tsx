@@ -39,6 +39,9 @@ export function Footer() {
                 <Link href="/yoga" className="link-quiet">Yoga</Link>
               </li>
               <li>
+                <Link href="/mobility" className="link-quiet">Mobility with Pilates</Link>
+              </li>
+              <li>
                 <Link href="/pricing" className="link-quiet">Pricing</Link>
               </li>
               <li>
