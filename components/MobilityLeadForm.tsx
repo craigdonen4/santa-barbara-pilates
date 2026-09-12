@@ -73,7 +73,7 @@ export function MobilityLeadForm() {
       <Field label="Phone" name="phone" type="tel" required autoComplete="tel" />
 
       <label className="block">
-        <span className="eyebrow">Anything we should know? (optional)</span>
+        <span className="text-xs font-bold uppercase tracking-[0.14em] text-text">Anything we should know? (optional)</span>
         <textarea
           name="notes"
           rows={4}
@@ -113,7 +113,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="eyebrow">{label}</span>
+      <span className="text-xs font-bold uppercase tracking-[0.14em] text-text">{label}</span>
       <input
         name={name}
         type={type}
