@@ -135,6 +135,10 @@ export default function MobilityPage() {
             the gym floor. Sessions are by appointment. Ask at the front desk
             at The Base, or leave your details below.
           </p>
+          <p>
+            Program designed by Santa Barbara Pilates. Led by The Base&apos;s
+            personal trainers.
+          </p>
         </div>
       </Container>
 
