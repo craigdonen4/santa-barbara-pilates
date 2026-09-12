@@ -5,99 +5,114 @@ import { MobilityLeadForm } from "@/components/MobilityLeadForm";
 export const metadata: Metadata = {
   title: "Mobility with Pilates",
   description:
-    "A sixty-minute mobility and Pilates hybrid built for members of The Base in Santa Barbara — core and glute work, Reformer lengthening, and stretching finished with massage-gun recovery. Taught in the Pilates studio, just past the gym floor.",
+    "A sixty-minute mobility and Pilates hybrid built for members of The Base in Santa Barbara — core and glute work, Reformer lengthening, and stretching finished with Thera Gun treatment. Taught in the Pilates studio, just past the gym floor.",
 };
 
-const HOUR = [
+// Campaign page — styled to match The Base's "Mobility With Pilates" flyer:
+// black panels, cream type, bright green checks. The green is deliberately
+// local to this page (flyer accent), not a site-wide token.
+const GREEN = "#8BBE4B";
+
+const SESSION = [
   {
-    eyebrow: "First twenty minutes",
-    title: "Core, hips & glutes",
-    body:
-      "Focused strength work to wake the center of the body — the muscles that carry everything else.",
+    line: "20 minutes of core, hips & glute work",
+    detail: "Focused strength to wake the center of the body.",
   },
   {
-    eyebrow: "Second twenty minutes",
-    title: "The Reformer",
-    body:
-      "Time on the Reformer to lengthen and align, opening what the day has shortened.",
+    line: "20 minutes on the Reformer to lengthen",
+    detail: "Time on the apparatus to open what the day has shortened.",
   },
   {
-    eyebrow: "Final twenty minutes",
-    title: "Mobility & recovery",
-    body:
-      "Stretching and guided mobility, finished with massage-gun work so the session settles in.",
+    line: "20 minutes of mobility & stretching",
+    detail: "Guided range work, finished with Thera Gun treatment.",
   },
 ];
 
 export default function MobilityPage() {
   return (
     <article>
-      <header className="bg-teal pt-16 pb-10 lg:pt-20 lg:pb-14">
+      <header className="bg-[#141414] pt-16 pb-14 lg:pt-20 lg:pb-16">
         <Container>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-surface/75">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#F5F0E8]/70">
             The Base &times; Santa Barbara Pilates
           </p>
-          <h1 className="font-display mt-4 max-w-3xl text-5xl leading-[1.05] text-surface md:text-7xl">
-            Mobility with Pilates
+          <h1 className="mt-5 font-sans text-6xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-8xl">
+            Mobility
+            <span className="mt-2 block text-4xl font-bold md:text-6xl">
+              With Pilates
+            </span>
           </h1>
+          <p className="mt-7 max-w-xl text-base leading-relaxed text-[#F5F0E8]/85 md:text-lg">
+            Strengthen your core, improve flexibility, and move with
+            confidence this season — a Mobility and Pilates hybrid session
+            designed for all ages and levels.
+          </p>
         </Container>
       </header>
 
-      <Container className="pt-10 pb-16 lg:pt-12 lg:pb-24">
-        <div className="prose-editorial">
-          <p>
-            One hour that gives you back the way you move. Mobility with
-            Pilates is a hybrid session built for members of The Base — the
-            length, mobility, and recovery work that hard training asks for,
-            taught in the Pilates studio just past the gym floor. Sixty
-            minutes, three parts, every age and every level welcome.
-          </p>
-        </div>
+      <Container className="pt-12 pb-16 lg:pt-16 lg:pb-20">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <h2 className="font-sans text-2xl font-extrabold uppercase tracking-wide text-text">
+              Each session:
+            </h2>
+            <ul className="mt-7 space-y-6">
+              {SESSION.map((item) => (
+                <li key={item.line} className="flex items-start gap-4">
+                  <span
+                    className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-base font-bold text-white"
+                    style={{ backgroundColor: GREEN }}
+                    aria-hidden="true"
+                  >
+                    &#10003;
+                  </span>
+                  <div>
+                    <p className="text-lg font-semibold leading-snug text-text">
+                      {item.line}
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-text-2">
+                      {item.detail}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-9 text-lg font-bold text-text">
+              The perfect addition to any fitness routine.
+            </p>
+          </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {HOUR.map((block) => (
-            <div key={block.title} className="border border-border bg-surface p-8">
-              <p className="eyebrow">{block.eyebrow}</p>
-              <h2 className="font-display font-semibold mt-3 text-2xl text-text">
-                {block.title}
-              </h2>
-              <p className="mt-3 text-base leading-relaxed text-text-2">
-                {block.body}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <figure className="relative mt-12 overflow-hidden">
-          <img
-            src="/pricing-mirrors.png"
-            alt="Reformers and Cadillac in the mirrored Santa Barbara Pilates studio"
-            className="h-auto w-full"
-          />
           <div
-            className="pointer-events-none absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(245,240,232,0) 0%, rgba(245,240,232,0) 68%, rgba(245,240,232,0.92) 100%)",
-            }}
-          />
-        </figure>
+            className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-full border-8"
+            style={{ borderColor: GREEN }}
+          >
+            <img
+              src="/pricing-mirrors.png"
+              alt="Reformers and Cadillac in the mirrored Santa Barbara Pilates studio"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
 
-        <div className="prose-editorial mt-10">
+        <div className="prose-editorial mt-14">
           <p>
-            It is the perfect addition to the training you are already doing
-            — lifting keeps its edge when the hips, spine, and shoulders keep
-            their range. Sessions are by appointment, in the Pilates studio
-            at The Base. Ask at the front desk, call{" "}
-            <a href="tel:+18055707489">(805) 570-7489</a>, or book below.
+            Mobility with Pilates was built for members of The Base — the
+            length, mobility, and recovery work that hard training asks for,
+            taught in the Pilates studio just past the gym floor. Sessions
+            are by appointment. Ask at the front desk, call{" "}
+            <a href="tel:+18055707489">(805) 570-7489</a>, or leave your
+            details below.
           </p>
         </div>
       </Container>
 
-      <section id="book" className="border-t border-border bg-surface-2 py-16 lg:py-20">
+      <section
+        id="book"
+        className="border-t border-border bg-surface-2 py-16 lg:py-20"
+      >
         <Container>
           <div className="mx-auto max-w-2xl">
-            <h2 className="font-display font-semibold text-3xl leading-tight text-text md:text-4xl">
+            <h2 className="font-sans text-3xl font-extrabold leading-tight text-text md:text-4xl">
               Ready to move better?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-text-2">
