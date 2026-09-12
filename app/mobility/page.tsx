@@ -33,7 +33,7 @@ const SESSION = [
 export default function MobilityPage() {
   return (
     <article>
-      <header className="bg-[#141414] pt-16 pb-14 lg:pt-20 lg:pb-16">
+      <header className="bg-[#141414] pt-8 pb-14 lg:pt-10 lg:pb-16">
         <Container>
           <div className="grid items-center gap-10 md:grid-cols-[1fr_auto]">
             <div>
@@ -46,9 +46,9 @@ export default function MobilityPage() {
                 The Base &times; Santa Barbara Pilates
               </p>
               <div className="mt-5 flex items-center gap-4 md:gap-10">
-                <h1 className="font-sans text-5xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-8xl">
+                <h1 className="font-sans text-5xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-9xl">
                   Mobility
-                  <span className="mt-2 block text-3xl font-bold md:text-6xl">
+                  <span className="mt-2 block text-3xl font-bold md:text-7xl">
                     With Pilates
                   </span>
                 </h1>
