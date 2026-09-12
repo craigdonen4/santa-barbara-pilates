@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { MobilityLeadForm } from "@/components/MobilityLeadForm";
 import { MobilityProtocol } from "@/components/MobilityProtocol";
+import { MobilityBook } from "@/components/MobilityBook";
 
 export const metadata: Metadata = {
   title: "Mobility with Pilates",
@@ -39,12 +40,15 @@ export default function MobilityPage() {
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#F5F0E8]/70">
                 The Base &times; Santa Barbara Pilates
               </p>
-              <h1 className="mt-5 font-sans text-6xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-8xl">
-                Mobility
-                <span className="mt-2 block text-4xl font-bold md:text-6xl">
-                  With Pilates
-                </span>
-              </h1>
+              <div className="mt-5 flex items-center gap-6 md:gap-10">
+                <h1 className="font-sans text-6xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-8xl">
+                  Mobility
+                  <span className="mt-2 block text-4xl font-bold md:text-6xl">
+                    With Pilates
+                  </span>
+                </h1>
+                <MobilityBook />
+              </div>
               <p className="mt-7 max-w-xl text-base leading-relaxed text-[#F5F0E8]/85 md:text-lg">
                 Strengthen your core, improve flexibility, and move with
                 confidence this season — a Mobility and Pilates hybrid
