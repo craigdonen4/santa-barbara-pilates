@@ -5,7 +5,7 @@ import { MobilityLeadForm } from "@/components/MobilityLeadForm";
 export const metadata: Metadata = {
   title: "Mobility with Pilates",
   description:
-    "A sixty-minute mobility and Pilates hybrid built for members of The Base in Santa Barbara — core and glute work, Reformer lengthening, and stretching finished with Thera Gun treatment. Taught in the Pilates studio, just past the gym floor.",
+    "A sixty-minute mobility and Pilates hybrid session in Santa Barbara, open to everyone — The Base members save $10 per session. Core and glute work, Reformer lengthening, and stretching finished with Thera Gun treatment.",
 };
 
 // Campaign page — styled to match The Base's "Mobility With Pilates" flyer:
@@ -80,6 +80,12 @@ export default function MobilityPage() {
             <p className="mt-9 text-lg font-bold text-text">
               The perfect addition to any fitness routine.
             </p>
+            <p
+              className="mt-4 inline-block rounded-md px-4 py-2 text-sm font-semibold text-white"
+              style={{ backgroundColor: GREEN }}
+            >
+              The Base members save $10 per session
+            </p>
           </div>
 
           <div
@@ -96,12 +102,13 @@ export default function MobilityPage() {
 
         <div className="prose-editorial mt-14">
           <p>
-            Mobility with Pilates was built for members of The Base — the
-            length, mobility, and recovery work that hard training asks for,
-            taught in the Pilates studio just past the gym floor. Sessions
-            are by appointment. Ask at the front desk, call{" "}
-            <a href="tel:+18055707489">(805) 570-7489</a>, or leave your
-            details below.
+            Mobility with Pilates is open to everyone — and made with members
+            of The Base in mind: the length, mobility, and recovery work that
+            hard training asks for, taught in the Pilates studio just past
+            the gym floor. Members of The Base receive ten dollars off each
+            session. Sessions are by appointment. Ask at the front desk,
+            call <a href="tel:+18055707489">(805) 570-7489</a>, or leave
+            your details below.
           </p>
         </div>
       </Container>
