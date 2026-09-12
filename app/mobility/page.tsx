@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { MobilityLeadForm } from "@/components/MobilityLeadForm";
+import { MobilityProtocol } from "@/components/MobilityProtocol";
 
 export const metadata: Metadata = {
   title: "Mobility with Pilates",
@@ -110,6 +111,7 @@ export default function MobilityPage() {
                 Split the session with a partner — no additional cost
               </p>
             </div>
+            <MobilityProtocol />
           </div>
 
           <div className="relative mx-auto aspect-square w-full max-w-md">
