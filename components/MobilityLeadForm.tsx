@@ -90,6 +90,7 @@ export function MobilityLeadForm() {
         type="submit"
         disabled={isPending || status === "submitting"}
         className="btn btn-primary disabled:opacity-60"
+        style={{ backgroundColor: "#8BBE4B", borderColor: "#8BBE4B" }}
       >
         {isPending || status === "submitting" ? "Sending…" : "Send"}
       </button>

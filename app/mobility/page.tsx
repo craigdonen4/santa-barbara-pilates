@@ -5,12 +5,12 @@ import { MobilityLeadForm } from "@/components/MobilityLeadForm";
 export const metadata: Metadata = {
   title: "Mobility with Pilates",
   description:
-    "A sixty-minute mobility and Pilates hybrid session in Santa Barbara, open to everyone — The Base members save $10 per session. Core and glute work, Reformer lengthening, and stretching finished with Thera Gun treatment.",
+    "A sixty-minute mobility and Pilates hybrid session in Santa Barbara, open to everyone — The Base members save $10 per session. Core and glute work, Reformer lengthening, and mobility, yoga and stretching finished with Thera Gun treatment.",
 };
 
 // Campaign page — styled to match The Base's "Mobility With Pilates" flyer:
-// black panels, cream type, bright green checks. The green is deliberately
-// local to this page (flyer accent), not a site-wide token.
+// black panels, cream type, bright green accents, circular photos. The green
+// is deliberately local to this page (flyer accent), not a site-wide token.
 const GREEN = "#8BBE4B";
 
 const SESSION = [
@@ -23,8 +23,8 @@ const SESSION = [
     detail: "Time on the apparatus to open what the day has shortened.",
   },
   {
-    line: "20 minutes of mobility & stretching",
-    detail: "Guided range work, finished with Thera Gun treatment.",
+    line: "20 minutes of mobility, yoga & stretching",
+    detail: "Then relax with Thera Gun treatment.",
   },
 ];
 
@@ -33,20 +33,36 @@ export default function MobilityPage() {
     <article>
       <header className="bg-[#141414] pt-16 pb-14 lg:pt-20 lg:pb-16">
         <Container>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#F5F0E8]/70">
-            The Base &times; Santa Barbara Pilates
-          </p>
-          <h1 className="mt-5 font-sans text-6xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-8xl">
-            Mobility
-            <span className="mt-2 block text-4xl font-bold md:text-6xl">
-              With Pilates
-            </span>
-          </h1>
-          <p className="mt-7 max-w-xl text-base leading-relaxed text-[#F5F0E8]/85 md:text-lg">
-            Strengthen your core, improve flexibility, and move with
-            confidence this season — a Mobility and Pilates hybrid session
-            designed for all ages and levels.
-          </p>
+          <div className="grid items-center gap-10 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#F5F0E8]/70">
+                The Base &times; Santa Barbara Pilates
+              </p>
+              <h1 className="mt-5 font-sans text-6xl font-extrabold leading-[0.95] tracking-tight text-[#F5F0E8] md:text-8xl">
+                Mobility
+                <span className="mt-2 block text-4xl font-bold md:text-6xl">
+                  With Pilates
+                </span>
+              </h1>
+              <p className="mt-7 max-w-xl text-base leading-relaxed text-[#F5F0E8]/85 md:text-lg">
+                Strengthen your core, improve flexibility, and move with
+                confidence this season — a Mobility and Pilates hybrid
+                session designed for all ages and levels.
+              </p>
+            </div>
+            <div className="relative hidden h-72 w-72 md:block">
+              <img
+                src="/mobility-tree.png"
+                alt="Standing balance work outdoors at The Base"
+                className="absolute left-0 top-0 h-44 w-44 rounded-full border-4 border-white object-cover"
+              />
+              <img
+                src="/mobility-downdog.png"
+                alt="Deep stretch outdoors at The Base"
+                className="absolute bottom-0 right-0 h-52 w-52 rounded-full border-4 border-white object-cover"
+              />
+            </div>
+          </div>
         </Container>
       </header>
 
@@ -96,14 +112,17 @@ export default function MobilityPage() {
             </div>
           </div>
 
-          <div
-            className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-full border-8"
-            style={{ borderColor: GREEN }}
-          >
+          <div className="relative mx-auto aspect-square w-full max-w-md">
+            <img
+              src="/mobility-reformer.png"
+              alt="Legs in straps on the Reformer at Santa Barbara Pilates"
+              className="absolute bottom-0 right-0 h-[78%] w-[78%] rounded-full border-8 object-cover"
+              style={{ borderColor: GREEN }}
+            />
             <img
               src="/pricing-mirrors.png"
               alt="Reformers and Cadillac in the mirrored Santa Barbara Pilates studio"
-              className="h-full w-full object-cover"
+              className="absolute left-0 top-0 h-[52%] w-[52%] rounded-full border-4 border-white object-cover shadow-lg"
             />
           </div>
         </div>
@@ -113,30 +132,29 @@ export default function MobilityPage() {
             Mobility with Pilates is open to everyone — and made with members
             of The Base in mind: the length, mobility, and recovery work that
             hard training asks for, taught in the Pilates studio just past
-            the gym floor. Members of The Base receive ten dollars off each
-            session, and you can bring a partner and split the cost of the
-            session at no additional charge. Sessions are by appointment.
-            Ask at the front desk, call{" "}
-            <a href="tel:+13109244925">(310) 924-4925</a>, or leave your
-            details below.
+            the gym floor. Sessions are by appointment. Ask at the front desk
+            at The Base, or leave your details below.
           </p>
         </div>
       </Container>
 
-      <section
-        id="book"
-        className="border-t border-border bg-surface-2 py-16 lg:py-20"
-      >
+      <section id="book" className="bg-[#141414] py-16 lg:py-20">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <h2 className="font-sans text-3xl font-extrabold leading-tight text-text md:text-4xl">
+            <p
+              className="text-xs font-bold uppercase tracking-[0.2em]"
+              style={{ color: GREEN }}
+            >
+              Book your session
+            </p>
+            <h2 className="mt-3 font-sans text-3xl font-extrabold leading-tight text-[#F5F0E8] md:text-4xl">
               Ready to move better?
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-text-2">
+            <p className="mt-4 text-base leading-relaxed text-[#F5F0E8]/80">
               Leave your details and we will call or email you within one
               business day to set up your first session.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 bg-bg p-6 md:p-8">
               <MobilityLeadForm />
             </div>
           </div>
