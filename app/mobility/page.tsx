@@ -80,12 +80,20 @@ export default function MobilityPage() {
             <p className="mt-9 text-lg font-bold text-text">
               The perfect addition to any fitness routine.
             </p>
-            <p
-              className="mt-4 inline-block rounded-md px-4 py-2 text-sm font-semibold text-white"
-              style={{ backgroundColor: GREEN }}
-            >
-              The Base members save $10 per session
-            </p>
+            <div className="mt-4 flex flex-col items-start gap-2">
+              <p
+                className="rounded-md px-4 py-2 text-sm font-semibold text-white"
+                style={{ backgroundColor: GREEN }}
+              >
+                The Base members save $10 per session
+              </p>
+              <p
+                className="rounded-md px-4 py-2 text-sm font-semibold text-white"
+                style={{ backgroundColor: GREEN }}
+              >
+                Split the session with a partner — no additional cost
+              </p>
+            </div>
           </div>
 
           <div
@@ -106,9 +114,11 @@ export default function MobilityPage() {
             of The Base in mind: the length, mobility, and recovery work that
             hard training asks for, taught in the Pilates studio just past
             the gym floor. Members of The Base receive ten dollars off each
-            session. Sessions are by appointment. Ask at the front desk,
-            call <a href="tel:+18055707489">(805) 570-7489</a>, or leave
-            your details below.
+            session, and you can bring a partner and split the cost of the
+            session at no additional charge. Sessions are by appointment.
+            Ask at the front desk, call{" "}
+            <a href="tel:+13109244925">(310) 924-4925</a>, or leave your
+            details below.
           </p>
         </div>
       </Container>
