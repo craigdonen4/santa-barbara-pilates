@@ -38,7 +38,7 @@ export default function MobilityPage() {
           <div className="grid items-center gap-10 md:grid-cols-[1fr_auto]">
             <div>
               <div className="flex w-full items-end justify-between md:justify-start md:gap-14">
-                <img src="/mobility-icon-sideplank.png" alt="" className="h-16 w-auto opacity-90 md:h-24" />
+                <img src="/mobility-icon-sideplank.png" alt="" className="h-16 w-auto -translate-y-[2px] opacity-90 md:h-24" />
                 <img src="/mobility-icon-reformer.png" alt="" className="h-16 w-auto opacity-90 md:h-24" />
                 <img src="/mobility-icon-downdog.png" alt="" className="h-16 w-auto opacity-90 md:h-24" />
               </div>
