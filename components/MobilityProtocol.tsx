@@ -107,10 +107,9 @@ export function MobilityProtocol() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="mt-6 inline-block rounded-md px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
-        style={{ backgroundColor: GREEN }}
+        className="mt-8 block w-full rounded-md bg-[#141414] px-8 py-4 text-center text-base font-bold text-white transition-opacity hover:opacity-90 md:text-lg"
       >
-        See the full session
+        See the Full Session
       </button>
 
       {open && (

@@ -98,6 +98,7 @@ export default function MobilityPage() {
                 </li>
               ))}
             </ul>
+            <MobilityProtocol />
             <p className="mt-9 text-lg font-bold text-text">
               The perfect addition to any fitness routine.
             </p>
@@ -115,7 +116,6 @@ export default function MobilityPage() {
                 Split the session with a partner — no additional cost
               </p>
             </div>
-            <MobilityProtocol />
           </div>
 
           <div className="relative mx-auto aspect-square w-full max-w-md">
