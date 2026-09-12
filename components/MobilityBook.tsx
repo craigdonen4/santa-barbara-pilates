@@ -29,7 +29,7 @@ export function MobilityBook() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-white text-center text-sm font-extrabold uppercase leading-tight tracking-wide text-white shadow-lg transition-transform hover:scale-105 md:h-32 md:w-32 md:text-base"
+        className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full text-center text-base font-extrabold uppercase leading-tight tracking-wide text-white shadow-lg transition-transform hover:scale-105 md:h-36 md:w-36 md:text-lg"
         style={{ backgroundColor: GREEN }}
       >
         Book
