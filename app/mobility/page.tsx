@@ -21,8 +21,8 @@ const SESSION = [
     detail: "Focused strength to wake the center of the body.",
   },
   {
-    line: "20 minutes on the Reformer to lengthen",
-    detail: "Time on the apparatus to open what the day has shortened.",
+    line: "20 minutes on the Reformer",
+    detail: "Axial elongation, limb and hip lengthening.",
   },
   {
     line: "20 minutes of mobility, yoga & stretching",

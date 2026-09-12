@@ -42,7 +42,7 @@ const BLOCKS: {
     title: "The Reformer",
     groups: [
       {
-        label: "A fixed sequence on the apparatus",
+        label: "Axial elongation · limb & hip lengthening",
         items: [
           "Footwork series — toes, arches, heels, tendon stretch",
           "Elephant — hamstrings & calves",
