@@ -69,7 +69,7 @@ export function MobilityBook() {
                   business day to set up your first session.
                 </p>
                 <img
-                  src="/mobility-tree.png"
+                  src="/mobility-tree-full.png"
                   alt="Standing balance work outdoors at The Base"
                   className="h-24 w-24 shrink-0 rounded-full border-4 object-cover md:h-28 md:w-28"
                   style={{ borderColor: GREEN }}
