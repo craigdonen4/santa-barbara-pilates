@@ -37,7 +37,12 @@ export default function MobilityPage() {
         <Container>
           <div className="grid items-center gap-10 md:grid-cols-[1fr_auto]">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-[#F5F0E8]/70">
+              <div className="flex items-end gap-8">
+                <img src="/mobility-icon-sideplank.png" alt="" className="h-14 w-auto opacity-90 md:h-16" />
+                <img src="/mobility-icon-reformer.png" alt="" className="h-14 w-auto opacity-90 md:h-16" />
+                <img src="/mobility-icon-downdog.png" alt="" className="h-14 w-auto opacity-90 md:h-16" />
+              </div>
+              <p className="mt-8 text-xs font-medium uppercase tracking-[0.18em] text-[#F5F0E8]/70">
                 The Base &times; Santa Barbara Pilates
               </p>
               <div className="mt-5 flex items-center gap-6 md:gap-10">
