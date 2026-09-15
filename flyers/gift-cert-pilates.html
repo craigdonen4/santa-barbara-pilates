@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gift Certificate — Private Pilates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: 7in 5in; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #9a9488; }
+  .cert {
+    width: 1050px; height: 750px; margin: 0 auto; background: #F5F0E8;
+    font-family: 'Inter', sans-serif; color: #2C2A25; padding: 26px;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .frame {
+    height: 100%; background: #FDFAF5; border: 1px solid #C4956A;
+    outline: 1px solid #C4956A; outline-offset: -8px;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; padding: 44px 70px 34px; position: relative;
+  }
+  .feather { height: 92px; width: auto; }
+  .eyebrow {
+    margin-top: 18px; font-size: 15px; letter-spacing: 0.42em;
+    text-transform: uppercase; color: #9A6B42; font-weight: 600;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600;
+    font-size: 34px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #0E5C6A; margin-top: 10px;
+  }
+  .rule { width: 220px; border-top: 1px solid #E2DDD6; margin: 20px auto 0; }
+  .item {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: 54px; line-height: 1.08; color: #2C2A25; margin-top: 22px;
+  }
+  .sub {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 24px; color: #5C5850; margin-top: 8px;
+  }
+  .value {
+    margin-top: 16px; font-size: 17px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: #9A6B42; font-weight: 600;
+  }
+  .lines {
+    margin-top: auto; width: 100%; display: flex; gap: 40px;
+    font-size: 14px; color: #5C5850;
+  }
+  .lines .f { flex: 1; text-align: left; }
+  .lines .blank { border-bottom: 1px solid #9A9488; height: 30px; }
+  .lines .lbl {
+    margin-top: 6px; font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: #9A9488;
+  }
+  .fine {
+    margin-top: 26px; font-size: 12.5px; line-height: 1.6; color: #9A9488;
+  }
+</style>
+</head>
+<body>
+<div class="cert">
+  <div class="frame">
+    <img class="feather" src="feather-vertical.png" alt="">
+    <div class="eyebrow">Gift Certificate</div>
+    <div class="brand">Santa Barbara Pilates</div>
+    <div class="rule"></div>
+    <div class="item">One Private Pilates Session</div>
+    <div class="sub">One hour on the full apparatus, one-on-one.</div>
+    <div class="value">Value &nbsp;$165</div>
+
+    <div class="lines">
+      <div class="f"><div class="blank"></div><div class="lbl">To</div></div>
+      <div class="f"><div class="blank"></div><div class="lbl">From</div></div>
+      <div class="f"><div class="blank"></div><div class="lbl">Date</div></div>
+    </div>
+
+    <div class="fine">
+      Redeemable by appointment &nbsp;&middot;&nbsp; (805) 635-8337 &nbsp;&middot;&nbsp; santabarbarapilates.com<br>
+      Enter at 122 Gray Ave, at The Base &nbsp;&middot;&nbsp; The Funk Zone, Santa Barbara
+    </div>
+  </div>
+</div>
+</body>
+</html>
