@@ -37,7 +37,7 @@ function leadRecipients(): string[] {
     .split(",")
     .map((s) => s.trim())
     .filter((s) => s.includes("@"));
-  const all = new Set([...configured, "saradonen@icloud.com"]);
+  const all = new Set([...configured, "sara@santabarbarapilates.com"]);
   return [...all];
 }
 
