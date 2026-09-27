@@ -28,6 +28,19 @@ function cleanList(raw: string, allowed: string[]): string {
   return allowed.filter((o) => picked.includes(o)).join(",");
 }
 
+/**
+ * Who gets the new-lead email. LEAD_NOTIFICATION_EMAIL may hold several
+ * addresses separated by commas; Sara always receives a copy.
+ */
+function leadRecipients(): string[] {
+  const configured = (process.env.LEAD_NOTIFICATION_EMAIL ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter((s) => s.includes("@"));
+  const all = new Set([...configured, "saradonen@icloud.com"]);
+  return [...all];
+}
+
 export async function submitLead(formData: FormData): Promise<LeadResult> {
   const first_name = String(formData.get("first_name") ?? "").trim();
   const last_name = String(formData.get("last_name") ?? "").trim();
@@ -87,15 +100,14 @@ export async function submitLead(formData: FormData): Promise<LeadResult> {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const notify = process.env.LEAD_NOTIFICATION_EMAIL;
 
-  if (apiKey && notify) {
+  if (apiKey) {
     try {
       const resend = new Resend(apiKey);
       const displayName = [first_name, last_name].filter(Boolean).join(" ") || email;
       await resend.emails.send({
         from: "Santa Barbara Pilates <studio@santabarbarapilates.com>",
-        to: notify,
+        to: leadRecipients(),
         replyTo: email,
         subject: `New inquiry — ${displayName}`,
         text: [
@@ -173,16 +185,15 @@ export async function submitMobilityLead(
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const notify = process.env.LEAD_NOTIFICATION_EMAIL;
 
-  if (apiKey && notify) {
+  if (apiKey) {
     try {
       const resend = new Resend(apiKey);
       const displayName =
         [first_name, last_name].filter(Boolean).join(" ") || email;
       await resend.emails.send({
         from: "Santa Barbara Pilates <studio@santabarbarapilates.com>",
-        to: notify,
+        to: leadRecipients(),
         replyTo: email,
         subject: `New Mobility with Pilates inquiry — ${displayName}`,
         text: [
