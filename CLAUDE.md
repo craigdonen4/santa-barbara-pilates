@@ -132,6 +132,13 @@ get its own `CLAUDE.md` documenting:
 
 - **Never delete columns from existing tables** — the portal may use them.
   Migrations should be additive only.
+- **Every migration that CREATEs a table must GRANT Data API access in the
+  same migration** (Supabase stopped auto-granting on new public tables as
+  of 2026-10-30; existing tables are grandfathered):
+  `grant select on public.t to anon;`
+  `grant select, insert, update, delete on public.t to authenticated, service_role;`
+  Scope the anon grant to what the site actually needs (e.g. leads is
+  INSERT-only for anon).
 - **Never modify the portal HTML** unless explicitly asked.
 - **Never enable RLS on the other 24 tables** without an explicit plan for
   the portal's auth state — it would break the portal.
