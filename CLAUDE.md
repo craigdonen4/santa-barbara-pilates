@@ -36,9 +36,8 @@ related but distinct project — see "Sibling project" below.
 - **Supabase project**: `zcyqhmsggjlqlhoygyll`
   (`https://zcyqhmsggjlqlhoygyll.supabase.co`)
 - **GitHub repo**: `github.com/craigdonen4/santa-barbara-pilates` (private)
-- **Netlify live URL**: `https://astounding-otter-2f0b57.netlify.app`
-- **Target production domain**: `santabarbarapilates.com`
-  (currently Squarespace until DNS cutover)
+- **Live domain**: `https://santabarbarapilates.com` (DNS cutover done as of
+  2026-11-05; the old `astounding-otter-2f0b57.netlify.app` address is dead)
 - **Portal app domain (sibling)**: `sbpilatesmanagmentpro.netlify.app`
 
 ## Brand tokens (locked — do not introduce off-palette colors)
